@@ -1502,28 +1502,11 @@ input, select, textarea {
 						.row.gtr-200.gtr-uniform > * {
 							padding-top: 30px;
 						}
-						
-
-						.row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
-.row > [class*="col-"] {
-  display: flex;
-}
-
-.row > [class*="col-"] > article {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 
 		}
 
 
-
+		
 
 /* Form */
 
