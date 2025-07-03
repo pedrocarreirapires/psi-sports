@@ -15,29 +15,117 @@
 
 <style>
 	.box.style2 {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
 
-.box.style2:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
+	.box.style2:hover {
+		transform: scale(1.05);
+		box-shadow: 0 8px 20px rgba(165, 8, 8, 0.2);
+		z-index: 1;
+	}
 
+	.button.large.scrolly {
+		background: rgb(227, 66, 36);
+		/* gradiente vermelho */
+		color: white;
+		padding: 1em 2em;
+		border-radius: 0;
+		text-decoration: none;
+		display: inline-block;
+		font-weight: bold;
+		font-size: 16px;
+		text-align: center;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+		/* sombra interna suave */
+		transition: opacity 0.3s ease;
+	}
 
+	.button.large.scrolly:hover {
+		opacity: 0.9;
+		cursor: pointer;
+	}
 
+	.hidden-content {
+		display: none;
+		opacity: 0;
+		transition: all 0.5s ease-in-out;
+		margin-top: 2rem;
+	}
+
+	.hidden-content.show {
+		display: block;
+		opacity: 1;
+	}
+
+	.content-inner {
+		background-color: #ffffff;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+	}
+
+	.content-flex {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		gap: 2rem;
+	}
+
+	.image-box {
+		flex: 1 1 40%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.illustration {
+		width: 100%;
+		max-width: 400px;
+		height: auto;
+		border-radius: 12px;
+		object-fit: cover;
+	}
+
+	.text-box {
+		flex: 1 1 55%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.text-box p {
+		margin-bottom: 1.2rem;
+		line-height: 1.7;
+		font-size: 1.05rem;
+		text-align: justify;
+		color: #333;
+	}
+
+	.text-box footer {
+		margin-top: 1.5rem;
+	}
+
+	.link-like {
+		color: rgb(227, 66, 36);
+		font-weight: bold;
+		cursor: pointer;
+		text-decoration: none;
+		/* pode mudar para underline se quiser */
+		display: inline-block;
+	}
 </style>
+
 
 <body class="is-preload">
 
 	<!-- Nav -->
-	<nav id="nav">
+	<nav id="nav" style="background-color: rgb(227, 66, 36);">
 		<ul class="container">
-			<li><a href="#top" style="color: rgba(66, 66, 228, 0.733);">Início</a></li>
-			<li><a href="#work">Sobre Mim</a></li>
-			<li><a href="#portfolio">Serviços</a></li>
-			<li><a href="#portfolio">Testemunhos</a></li>
-			<li><a href="#contact">Contacto</a></li>
+			<li><a href="#top">Início</a></li>
+			<li><a href="#work" style="color: rgb(74, 57, 47);">Sobre Mim</a></li>
+			<li><a href="#portfolio" style="color: rgb(74, 57, 47);">Serviços</a></li>
+			<li><a href="#portfolio" style="color: rgb(74, 57, 47);">Testemunhos</a></li>
+			<li><a href="#contact" style="color: rgb(74, 57, 47);">Contacto</a></li>
 		</ul>
 	</nav>
 
@@ -50,12 +138,10 @@
 				</div>
 				<div class="col-8 col-7-large col-12-medium">
 					<header>
-						<h1>Prepara a tua mente</h1>
-						<h1>da mesma forma que preparas</h1>
-						<h1>o teu corpo.</h1>
+						<h1>Josué Fonseca</h1>
 					</header>
-					<p><strong>Josué
-							Fonseca</strong><!--<a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net">HTML5 UP</a> &amp; released under the <a href="http://html5up.net/license">CCA license</a>.-->
+					<p><strong>Prepara a tua mente da mesma forma que prepararas o teu
+							corpo</strong><!--<a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net">HTML5 UP</a> &amp; released under the <a href="http://html5up.net/license">CCA license</a>.-->
 					</p>
 					<a href="#contact" class="button large scrolly">Agendar Consulta</a>
 				</div>
@@ -67,47 +153,80 @@
 	<article id="work" class="wrapper style2">
 		<div class="container">
 			<header>
-				<h2>Sobre Mim</h2>
-				<p>Olá, sou o Josué Fonseca, sou Psicólogo e atuo na área da Psicologia Desportiva. Acredito que o
-					sucesso de um atleta não depende apenas de uma preparação física robusta, mas também de uma
-					preparação mental adequada, de modo a superar os desafios constantes que a sua modalidade exige. Por
-					isso, apoio atletas, treinadores e pais a desenvolverem as capacidades psicológicas necessárias para
-					alcançar os seus objetivos e bem-estar no desporto.
-					Porém o meu sonho nem sempre foi ser Psicólogo Desportivo...</p>
+				<div class="text-box">
+					<h2>Sobre Mim</h2>
+					<p>
+						Olá, sou o <strong>Josué Fonseca</strong>, Psicólogo especializado em <strong>Psicologia
+							Desportiva</strong>. Acredito que o sucesso de um atleta não depende apenas de uma
+						preparação física robusta, mas também de uma preparação mental adequada para superar os desafios
+						constantes do desporto.
+					</p>
+					<p>
+						Apoio atletas, treinadores e pais a desenvolverem as competências psicológicas necessárias para
+						alcançarem os seus objetivos e bem-estar.
+					</p>
+					<p>
+						Porém, o meu sonho nem sempre foi ser Psicólogo Desportivo... <a href="javascript:void(0)"
+							id="toggleButton" class="link-like">Saber mais</a>
+					</p>
+
+
+				</div>
+
 			</header>
-			<!--<div class="row aln-center">
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-comments"></span>
-								<h3>Consequat lorem</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-camera-retro"></span>
-								<h3>Lorem dolor tempus</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-thumbs-up"></span>
-								<h3>Feugiat posuere</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
-							</section>
-						</div>
+
+			<div id="moreContent" class="hidden-content">
+				<div class="content-inner content-flex">
+					<div class="image-box">
+						<img src="images/josue.jpg" alt="Psicologia Desportiva" class="illustration" />
 					</div>
-					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#portfolio" class="button large scrolly">See some of my recent work</a>
-					</footer> -->
+					<div class="text-box">
+						<p>
+							O meu sonho era ser <strong>profissional</strong>. Pratiquei várias modalidades: futebol, natação,
+							voleibol, futebol americano. Em todas elas, sonhei alto, mas uma a uma, fui desistindo,
+							assim como dos sonhos que as acompanhavam.
+						</p>
+						<p>
+							Mas essas experiências ensinaram-me algo <strong>valioso</strong>: percebi que apesar da paixão pelo
+							desporto, não tinha as capacidades psicológicas necessárias para vingar na área. Então
+							canalizei essa paixão e dediquei-me à <strong>Psicologia</strong>.
+						</p>
+						<p>
+							Agarrei-me aos estudos e mergulhei no funcionamento da mente humana. Licenciei-me em
+							Psicologia, realizei Mestrado em Psicologia da Saúde, formei-me em "Equipas de Alto
+							Desempenho" e, pouco a pouco, percebi algo poderoso: Apesar de eu não ter conseguido
+							realizar o meu sonho de ser atleta, <strong>podia ajudar outras pessoas a atingirem os seus!</strong>
+						</p>
+						<p>
+							Foi aí que descobri o meu verdadeiro propósito: ser Psicólogo na área do Desporto. Hoje,
+							ajudo pessoas de todas as idades a cumprir os seus sonhos e objetivos no desporto, quer seja
+							chegar ao nível profissional, recuperar de um momento difícil ou simplesmente desfrutar do
+							desporto com confiança, alegria e bem-estar.
+						</p>
+						<p>
+							Na minha altura eu não tinha as ferramentas que que agora sei que fazem <strong>toda a diferença,</strong>
+							mas isso não significa que tu também não as possas ter.
+							Estou aqui para te ajudar a construir a mentalidade necessária para que o teu sonho se torne
+							<strong>realidade</strong>.
+						</p>
+						<p>
+							Com o apoio certo, o caminho torna-se mais leve. E mais teu.
+							Vem dar este passo, com apoio, em direção ao teu sucesso e bem-estar.
+						</p>
+
+						<p>
+							<a href="#contact" class="button large scrolly">Agendar Consulta</a>
+
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</article>
 
 
 	<!-- Seção de Serviços -->
-	<article id="portfolio" class="wrapper style3">
+	<article id="portfolio" class="wrapper style3" style="background-color: white;">
 		<div class="container">
 			<header>
 				<h2>Serviços</h2>
@@ -132,6 +251,9 @@
 						<p><strong>Duração:</strong> 50 minutos <br>
 							<strong>Local:</strong> Online
 						</p>
+						<p>
+						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
+					    </p>
 						`)">
 						<a href="javascript:void(0)" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
 						<h3><a href="javascript:void(0)">Consulta de Psicologia Desportiva Individual</a></h3>
@@ -154,6 +276,9 @@
 							<strong>Duração:</strong> 30 mins a 1hora </br>
 							<strong>Local:</strong> Espaço de Treinos do próprio Clube
 						</p>
+												<p>
+						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
+					    </p>
 						`)">
 						<a href="javascript:void(0)" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
 						<h3><a href="javascript:void(0)">Acompanhamento Psicológico de Equipas</a></h3>
@@ -176,9 +301,14 @@
 						<p>
 							<strong>Duração:</strong> 50 minutos</br>
 							<strong>Local:</strong> Online
-						</p>`)">
+						</p>
+																		<p>
+						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
+					    </p>
+						`)">
+
 						<a href="javascript:void(0)" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-						<h3><a href="javascript:void(0)">Aconselhamento Parental</a></h3>
+						<h3><a href="javascript:void(0)">Aconselhamento </br> Parental</a></h3>
 
 					</article>
 				</div>
@@ -200,7 +330,11 @@
 						<p>
 							<strong>Duração:</strong> 50 minutos</br>
 							<strong>Local:</strong> Online
-						</p>`)">
+						</p>
+												<p>
+						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
+					    </p>
+						`)">
 						<a href="javascript:void(0)" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
 						<h3><a href="javascript:void(0)">Acompanhamento Psicológico de Treinadores</a></h3>
 
@@ -234,57 +368,67 @@
 		<div class="container medium">
 			<header>
 				<h2>Agendar Consulta</h2>
-				<p>Podes saber mais sobre o meu trabalho e sobre a minha equipa através das minhas redes sociais e contactar-me através dos seguintes contactos para esclarecer qualquer dúvida.
-
-Também podes fazer aqui o teu pedido de consulta.</p>
+				<p>Podes saber mais sobre o meu trabalho e sobre a minha equipa através das minhas redes sociais e
+					contactar-me através dos seguintes contactos para esclarecer qualquer dúvida.
+					Também podes fazer aqui o teu pedido de consulta.</p>
 			</header>
 			<div class="row">
 				<div class="col-12">
-  <form id="contactForm">
-    <div class="row">
-      <div class="col-6 col-12-small">
-        <input type="text" name="name" id="name" placeholder="Nome" required />
-      </div>
-      <div class="col-6 col-12-small">
-        <input type="email" name="email" id="email" placeholder="Email" required />
-      </div>
-      <div class="col-12">
-        <input type="text" name="subject" id="subject" placeholder="Assunto" required />
-      </div>
-      <div class="col-12">
-        <textarea name="message" id="message" placeholder="Mensagem (breve descrição do pedido ou dúvidas relativamente ao serviço)" required></textarea>
-      </div>
+					<form id="contactForm">
+						<div class="row">
+							<div class="col-6 col-12-small">
+								<input type="text" name="name" id="name" placeholder="Nome" required />
+							</div>
+							<div class="col-6 col-12-small">
+								<input type="email" name="email" id="email" placeholder="Email" required />
+							</div>
+							<div class="col-12">
+								<input type="text" name="subject" id="subject" placeholder="Assunto" required />
+							</div>
+							<div class="col-12">
+								<textarea name="message" id="message"
+									placeholder="Mensagem (breve descrição do pedido ou dúvidas relativamente ao serviço)"
+									required></textarea>
+							</div>
 
-      <!-- Campos escondidos -->
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_template" value="box" />
-      <input type="hidden" name="_autoresponse" value="Olá, recebemos a sua mensagem com sucesso. Entraremos em contacto o mais breve possível." />
+							<!-- Campos escondidos -->
+							<input type="hidden" name="_captcha" value="false" />
+							<input type="hidden" name="_template" value="box" />
+							<input type="hidden" name="_autoresponse"
+								value="Olá, recebemos a sua mensagem com sucesso. Entraremos em contacto o mais breve possível." />
 
-      <div class="col-12">
-        <ul class="actions">
-          <li><input type="submit" value="Enviar Mensagem" /></li>
-         <!-- <li><input type="reset" value="Clear Form" class="alt" /></li>-->
-        </ul>
-      </div>
-    </div>
-  </form>
+							<div class="col-12">
+								<ul class="actions">
+									<li><input type="submit" value="Enviar Mensagem" /></li>
+									<!-- <li><input type="reset" value="Clear Form" class="alt" /></li>-->
+								</ul>
+							</div>
+						</div>
+					</form>
 
-  <div id="messageSent" style="display:none; margin-top:20px; color: green; font-weight: bold;">
-    Mensagem enviada com sucesso! Obrigado pelo seu contacto.
-  </div>
-</div>
+					<div id="messageSent" style="display:none; margin-top:20px; color: green; font-weight: bold;">
+						Mensagem enviada com sucesso! Obrigado pelo seu contacto.
+					</div>
+				</div>
 
 
 				<div class="col-12">
 					<hr />
 					<h3>Josué Fonseca
-Psicologia Desportiva</h3>
+						Psicologia Desportiva</h3>
 					<ul class="social">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-tiktok"><span class="label">TikTok</span></a></li>
+						<li><a href="https://www.facebook.com/people/Josu%C3%A9-Fonseca-Psicologia/61562748162794/#"
+								class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.youtube.com/@Josu%C3%A9_Fonseca_Psic%C3%B3logo"
+								class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+						<li><a href="https://www.instagram.com/josue_psicologo_desporto/#"
+								class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://www.linkedin.com/in/josu%C3%A9-fonseca-853005216/"
+								class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://www.tiktok.com/@josue_psi.desporto" class="icon brands fa-tiktok"><span
+									class="label">TikTok</span></a></li>
+						<li><a href="https://api.whatsapp.com/send/?phone=351917859956&text&type=phone_number&app_absent=0"
+								class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
 						<!--
 								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
 								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
@@ -348,43 +492,71 @@ Psicologia Desportiva</h3>
 	</script>
 
 	<script>
-  const form = document.getElementById('contactForm');
-  const messageSent = document.getElementById('messageSent');
+		const form = document.getElementById('contactForm');
+		const messageSent = document.getElementById('messageSent');
 
-  form.addEventListener('submit', function(event) {
-    event.preventDefault(); // evita reload da página
+		form.addEventListener('submit', function (event) {
+			event.preventDefault(); // evita reload da página
 
-    const formData = new FormData(form);
+			const formData = new FormData(form);
 
-    fetch('https://formsubmit.co/ajax/pedro10pires@gmail.com', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
+			fetch('https://formsubmit.co/ajax/pedro10pires@gmail.com', {
+				method: 'POST',
+				body: formData,
+				headers: {
+					'Accept': 'application/json'
+				}
+			})
+				.then(response => {
+					if (response.ok) {
+						form.style.display = 'none';  // esconde o formulário
+						messageSent.style.display = 'block';  // mostra a mensagem
+					} else {
+						return response.json().then(data => {
+							if (Object.hasOwn(data, 'errors')) {
+								alert(data["errors"].map(error => error["message"]).join(", "));
+							} else {
+								alert("Ocorreu um erro ao enviar a mensagem.");
+							}
+						})
+					}
+				})
+				.catch(error => {
+					alert("Ocorreu um erro ao enviar a mensagem.");
+					console.error(error);
+				});
+		});
+	</script>
+
+	<script>
+		document.getElementById("toggleButton").addEventListener("click", function () {
+			const content = document.getElementById("moreContent");
+			content.classList.toggle("show");
+			this.textContent = content.classList.contains("show") ? "Mostrar Menos" : "Saber Mais";
+		});
+	</script>
+
+	
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).on('click', 'a.scrolly', function(e) {
+    e.preventDefault();
+    const target = $(this).attr('href');
+
+    if (typeof fecharModal === 'function') {
+      fecharModal();
+    }
+
+    if (target && target.startsWith('#')) {
+      const $targetElement = $(target);
+      if ($targetElement.length) {
+        $('html, body').animate({
+          scrollTop: $targetElement.offset().top
+        }, 600);
       }
-    })
-    .then(response => {
-      if (response.ok) {
-        form.style.display = 'none';  // esconde o formulário
-        messageSent.style.display = 'block';  // mostra a mensagem
-      } else {
-        return response.json().then(data => {
-          if(Object.hasOwn(data, 'errors')) {
-            alert(data["errors"].map(error => error["message"]).join(", "));
-          } else {
-            alert("Ocorreu um erro ao enviar a mensagem.");
-          }
-        })
-      }
-    })
-    .catch(error => {
-      alert("Ocorreu um erro ao enviar a mensagem.");
-      console.error(error);
-    });
+    }
   });
 </script>
-
-
 </body>
 
 </html>
