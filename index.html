@@ -129,6 +129,10 @@
 			position: relative;
 		}
 
+
+		.wrapper.style1 {
+  transform: translateY(-1px);
+}
 		.wrapper.style1::before {
 			content: "";
 			position: absolute;
@@ -136,7 +140,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: rgba(0, 0, 0, 0.4);
+			background: rgba(0, 0, 0, 0.3);
 			z-index: 0;
 		}
 
@@ -150,6 +154,93 @@
 			color: white !important;
 			text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 		}
+
+
+
+
+/* NAV */
+#nav {
+	background-color: #4A392F;
+	position: top;
+	z-index: 10;
+	height: 60px;
+}
+
+/* Container interno */
+.nav-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	padding: 0 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+/* Logo */
+.logo img.logo-img {
+	height: 40px;
+	object-fit: contain;
+	display: block;
+}
+
+/* Botão hamburguer */
+.menu-toggle {
+	display: none;
+	font-size: 2rem;
+	color: white;
+	cursor: pointer;
+	height: 100%;
+	
+	align-items: center;
+	padding-left: 10px;
+}
+
+/* Menu */
+.nav-links {
+	display: flex;
+	gap: 20px;
+	list-style: none;
+	margin: 0;
+	transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.nav-links li a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+	.menu-toggle {
+		display: flex;
+	}
+
+	.nav-links {
+		flex-direction: column;
+		background-color: #4A392F;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		max-height: 0;
+		opacity: 0;
+		padding: 0;
+		z-index: 9;
+	}
+
+	.nav-links.show {
+		max-height: 500px;
+		opacity: 1;
+		padding: 1rem 0;
+	}
+}
+
+
+
 	</style>
 
 
@@ -158,29 +249,31 @@
 
 <body class="is-preload">
 
-	<!-- Nav -->
-<!-- Nav -->
-<nav id="nav" style="background-color: #4A392F;">
-  <div class="container" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0;">
-    
-    <!-- Logotipo alinhado com o conteúdo -->
+<nav id="nav">
+  <div class="nav-wrapper">
+    <!-- Logo -->
     <div class="logo">
       <a href="#top">
-        <img src="images/logo.png" alt="Logotipo" style="height: 40px;">
+        <img src="images/logo.png" alt="Logotipo" class="logo-img">
       </a>
     </div>
 
-    <!-- Menu de navegação -->
-    <ul style="display: flex; gap: 20px; list-style: none; margin: 0;">
-      <li><a href="#top" style="color: #E34224; text-decoration: none;">Início</a></li>
-      <li><a href="#work" style="color: white; text-decoration: none;">Sobre Mim</a></li>
-      <li><a href="#portfolio" style="color: white; text-decoration: none;">Serviços</a></li>
-      <li><a href="#testemunho" style="color: white; text-decoration: none;">Testemunhos</a></li>
-      <li><a href="#contact" style="color: white; text-decoration: none;">Contacto</a></li>
+    <!-- Botão hamburguer -->
+    <div class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu">
+      ☰
+    </div>
+
+    <!-- Menu -->
+    <ul id="menu" class="nav-links">
+      <li><a href="#top" onclick="closeMenu()" style="color: #E34224;">Início</a></li>
+      <li><a href="#work" onclick="closeMenu()">Sobre Mim</a></li>
+      <li><a href="#portfolio" onclick="closeMenu()">Serviços</a></li>
+      <li><a href="#testemunho" onclick="closeMenu()">Testemunhos</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contacto</a></li>
     </ul>
-    
   </div>
 </nav>
+
 
 
 	<!-- Home -->
@@ -584,7 +677,7 @@ E eu gostaria de agradecer por tudo"</a></h4>
 
 		function abrirModal(titulo, conteudo) {
 			document.getElementById('modal-title').innerText = titulo;
-			document.getElementById('modal-text').innerHTML = conteudo; // <- Aqui está a alteração
+			document.getElementById('modal-text').innerHTML = conteudo; 
 			modal.style.display = 'flex';
 			history.pushState({ modalAberto: true }, "Modal Aberto");
 		}
@@ -676,6 +769,16 @@ E eu gostaria de agradecer por tudo"</a></h4>
       }
     }
   });
+</script>
+<script>
+	function toggleMenu() {
+		const menu = document.getElementById('menu');
+		menu.classList.toggle('show');
+	}
+
+	function closeMenu() {
+		document.getElementById('menu').classList.remove('show');
+	}
 </script>
 </body>
 
