@@ -159,6 +159,7 @@
 				</header>
 				<h2><strong>Prepara a tua mente da mesma forma que preparas o teu corpo</strong></h2>
 				<a href="#contact" class="button large scrolly">Agendar Consulta</a>
+				<button class="button large scrolly" data-target="#contact">Agendar Consulta</button>
 			</div>
 		</div>
 	</div>
@@ -621,9 +622,11 @@ E eu gostaria de agradecer por tudo"</a></h4>
 	
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  $(document).on('click', 'a.scrolly', function(e) {
+  $(document).on('click', '.scrolly', function (e) {
     e.preventDefault();
-    const target = $(this).attr('href');
+
+    const target =
+      $(this).attr('href') || $(this).data('target') || $(this).attr('data-href');
 
     if (typeof fecharModal === 'function') {
       fecharModal();
@@ -634,7 +637,7 @@ E eu gostaria de agradecer por tudo"</a></h4>
       if ($targetElement.length) {
         $('html, body').animate({
           scrollTop: $targetElement.offset().top
-        }, 600);
+        }, 2500); // tempo em milissegundos
       }
     }
   });
