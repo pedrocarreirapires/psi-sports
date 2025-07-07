@@ -14,143 +14,143 @@
 
 </head>
 
-<style>
-	.box.style2 {
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
+	<style>
+		.box.style2 {
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
 
-	.box.style2:hover {
-		transform: scale(1.05);
-		box-shadow: 0 8px 20px rgba(165, 8, 8, 0.2);
-		z-index: 1;
-	}
+		.box.style2:hover {
+			transform: scale(1.05);
+			box-shadow: 0 8px 20px rgba(165, 8, 8, 0.2);
+			z-index: 1;
+		}
 
-	.button.large.scrolly {
-		background: #E34224;
-		color: white;
-		padding: 1em 2em;
-		border-radius: 0;
-		text-decoration: none;
-		display: inline-block;
-		font-weight: bold;
-		font-size: 16px;
-		text-align: center;
-		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-		transition: opacity 0.3s ease;
-	}
+		.button.large.scrolly {
+			background: #E34224;
+			color: white;
+			padding: 1em 2em;
+			border-radius: 0;
+			text-decoration: none;
+			display: inline-block;
+			font-weight: bold;
+			font-size: 16px;
+			text-align: center;
+			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+			transition: opacity 0.3s ease;
+		}
 
-	.button.large.scrolly:hover {
-		opacity: 0.9;
-		cursor: pointer;
-	}
+		.button.large.scrolly:hover {
+			opacity: 0.9;
+			cursor: pointer;
+		}
 
-	.hidden-content {
-		display: none;
-		opacity: 0;
-		transition: all 0.5s ease-in-out;
-		margin-top: 2rem;
-	}
+		.hidden-content {
+			display: none;
+			opacity: 0;
+			transition: all 0.5s ease-in-out;
+			margin-top: 2rem;
+		}
 
-	.hidden-content.show {
-		display: block;
-		opacity: 1;
-	}
+		.hidden-content.show {
+			display: block;
+			opacity: 1;
+		}
 
-	.content-inner {
-		background-color: #ffffff;
-		padding: 2rem;
-		border-radius: 12px;
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-	}
+		.content-inner {
+			background-color: #ffffff;
+			padding: 2rem;
+			border-radius: 12px;
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+		}
 
-	.content-flex {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: stretch;
-		gap: 2rem;
-	}
+		.content-flex {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+			gap: 2rem;
+		}
 
-	.image-box {
-		flex: 1 1 40%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+		.image-box {
+			flex: 1 1 40%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
-	.illustration {
-		width: 100%;
-		max-width: 400px;
-		height: auto;
-		object-fit: cover;
-	}
+		.illustration {
+			width: 100%;
+			max-width: 400px;
+			height: auto;
+			object-fit: cover;
+		}
 
-	.text-box {
-		flex: 1 1 55%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
+		.text-box {
+			flex: 1 1 55%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
 
-	.text-box p {
-		margin-bottom: 1.2rem;
-		line-height: 1.7;
-		font-size: 1.05rem;
-		text-align: justify;
-		color: #333;
-	}
+		.text-box p {
+			margin-bottom: 1.2rem;
+			line-height: 1.7;
+			font-size: 1.05rem;
+			text-align: justify;
+			color: #333;
+		}
 
-	.text-box footer {
-		margin-top: 1.5rem;
-	}
+		.text-box footer {
+			margin-top: 1.5rem;
+		}
 
-	.link-like {
-		color: #E34224;
-		font-weight: bold;
-		cursor: pointer;
-		text-decoration: none;
-		display: inline-block;
-	}
+		.link-like {
+			color: #E34224;
+			font-weight: bold;
+			cursor: pointer;
+			text-decoration: none;
+			display: inline-block;
+		}
 
-	h1, h2, h3 {
-		color: #4A392F;
-	}
+		h1, h2, h3 {
+			color: #4A392F;
+		}
 
-	.text-white {
-		color: white;
-	}
+		.text-white {
+			color: white;
+		}
 
-	.image.featured img {
-		height: 250px;
-		width: 100%;
-		object-fit: cover;
-	}
+		.image.featured img {
+			height: 250px;
+			width: 100%;
+			object-fit: cover;
+		}
 
-	.wrapper.style1 {
-		position: relative;
-	}
+		.wrapper.style1 {
+			position: relative;
+		}
 
-	.wrapper.style1::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.4);
-		z-index: 0;
-	}
+		.wrapper.style1::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.4);
+			z-index: 0;
+		}
 
-	.wrapper.style1 .container {
-		position: relative;
-		z-index: 1;
-	}
+		.wrapper.style1 .container {
+			position: relative;
+			z-index: 1;
+		}
 
 
-	.text-white, .text-white * {
-		color: white !important;
-		text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-	}
-</style>
+		.text-white, .text-white * {
+			color: white !important;
+			text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+		}
+	</style>
 
 
 
@@ -186,19 +186,16 @@
 	<!-- Home -->
 <article id="top" class="wrapper style1" style="background: url('images/back_1.jpg') center center / cover no-repeat;">
 	<div class="container">
-		<div class="row">
-			<!--<div class="col-4 col-5-large col-12-medium">
-				<span class="image fit"><img src="images/josue1.jpg" alt="" /></span>
-			</div>-->
-			<div class="col-8 col-7-large col-12-medium">
-				<header>
-					<h1 class="text-white">Josué Fonseca</h1>
-				</header>
-				<h2 class="text-white"><strong>Prepara a tua mente da mesma</strong></h2>
-					<h2 class="text-white"><strong>que preparas o teu corpo</strong></h2>
-				<a href="#contact" class="button large scrolly">Agendar Consulta</a>
-			</div>
-		</div>
+<div class="row" style="justify-content: flex-end; text-align: right;">
+	<div class="col-8 col-7-large col-12-medium">
+		<header>
+			<h1 class="text-white">Josué Fonseca</h1>
+		</header>
+		<h2 class="text-white"><strong>Prepara a tua mente da mesma</strong></h2>
+		<h2 class="text-white"><strong>que preparas o teu corpo</strong></h2>
+		<a href="#contact" class="button large scrolly">Agendar Consulta</a>
+	</div>
+</div>
 	</div>
 </article>
 
