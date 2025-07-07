@@ -7,291 +7,292 @@
 <html>
 
 <head>
-	<title>Josué</title>
+	<title>Josué Fonseca - Psicologia Desportiva</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 
 </head>
 
-	<style>
-		.box.style2 {
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-		}
-
-		.box.style2:hover {
-			transform: scale(1.05);
-			box-shadow: 0 8px 20px rgba(165, 8, 8, 0.2);
-			z-index: 1;
-		}
-
-		.button.large.scrolly {
-			background: #E34224;
-			color: white;
-			padding: 1em 2em;
-			border-radius: 0;
-			text-decoration: none;
-			display: inline-block;
-			font-weight: bold;
-			font-size: 16px;
-			text-align: center;
-			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-			transition: opacity 0.3s ease;
-		}
-
-		.button.large.scrolly:hover {
-			opacity: 0.9;
-			cursor: pointer;
-		}
-
-		.hidden-content {
-			display: none;
-			opacity: 0;
-			transition: all 0.5s ease-in-out;
-			margin-top: 2rem;
-		}
-
-		.hidden-content.show {
-			display: block;
-			opacity: 1;
-		}
-
-		.content-inner {
-			background-color: #ffffff;
-			padding: 2rem;
-			border-radius: 12px;
-			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-		}
-
-		.content-flex {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: stretch;
-			gap: 2rem;
-		}
-
-		.image-box {
-			flex: 1 1 40%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.illustration {
-			width: 100%;
-			max-width: 400px;
-			height: auto;
-			object-fit: cover;
-		}
-
-		.text-box {
-			flex: 1 1 55%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
-
-		.text-box p {
-			margin-bottom: 1.2rem;
-			line-height: 1.7;
-			font-size: 1.05rem;
-			text-align: justify;
-			color: #333;
-		}
-
-		.text-box footer {
-			margin-top: 1.5rem;
-		}
-
-		.link-like {
-			color: #E34224;
-			font-weight: bold;
-			cursor: pointer;
-			text-decoration: none;
-			display: inline-block;
-		}
-
-		h1, h2, h3 {
-			color: #4A392F;
-		}
-
-		.text-white {
-			color: white;
-		}
-
-		.image.featured img {
-			height: 250px;
-			width: 100%;
-			object-fit: cover;
-		}
-
-		.wrapper.style1 {
-			position: relative;
-		}
-
-
-		.wrapper.style1 {
-  transform: translateY(-1px);
-}
-		.wrapper.style1::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(0, 0, 0, 0.3);
-			z-index: 0;
-		}
-
-		.wrapper.style1 .container {
-			position: relative;
-			z-index: 1;
-		}
-
-
-		.text-white, .text-white * {
-			color: white !important;
-			text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-		}
-
-
-
-
-/* NAV */
-#nav {
-	background-color: #4A392F;
-	position: top; /* <-- esta propriedade não é válida, vê nota abaixo */
-	z-index: 10;
-	height: 60px;
-	font-size: 14px; /* ou outro valor mais pequeno como 12px */
-}
-
-/* Container interno */
-.nav-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 100%;
-	padding: 0 20px;
-	max-width: 1200px;
-	margin: 0 auto;
-	box-sizing: border-box;
-}
-
-/* Logo */
-.logo img.logo-img {
-	height: 40px;
-	object-fit: contain;
-	display: block;
-}
-
-/* Botão hamburguer */
-.menu-toggle {
-	display: none;
-	font-size: 2rem;
-	color: white;
-	cursor: pointer;
-	height: 100%;
-	
-	align-items: center;
-	padding-left: 10px;
-}
-
-/* Menu */
-.nav-links {
-	display: flex;
-	gap: 20px;
-	list-style: none;
-	margin: 0;
-	transition: max-height 0.4s ease, opacity 0.4s ease;
-}
-
-.nav-links li a {
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-	.menu-toggle {
-		display: flex;
+<style>
+	.box.style2 {
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
 	}
 
-	.nav-links {
+	.box.style2:hover {
+		transform: scale(1.05);
+		box-shadow: 0 8px 20px rgba(165, 8, 8, 0.2);
+		z-index: 1;
+	}
+
+	.button.large.scrolly {
+		background: #E34224;
+		color: white;
+		padding: 1em 2em;
+		border-radius: 0;
+		text-decoration: none;
+		display: inline-block;
+		font-weight: bold;
+		font-size: 16px;
+		text-align: center;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+		transition: opacity 0.3s ease;
+	}
+
+	.button.large.scrolly:hover {
+		opacity: 0.9;
+		cursor: pointer;
+	}
+
+	.hidden-content {
+		display: none;
+		opacity: 0;
+		transition: all 0.5s ease-in-out;
+		margin-top: 2rem;
+	}
+
+	.hidden-content.show {
+		display: block;
+		opacity: 1;
+	}
+
+	.content-inner {
+		background-color: #ffffff;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+	}
+
+	.content-flex {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		gap: 2rem;
+	}
+
+	.image-box {
+		flex: 1 1 40%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.illustration {
+		width: 100%;
+		max-width: 400px;
+		height: auto;
+		object-fit: cover;
+	}
+
+	.text-box {
+		flex: 1 1 55%;
+		display: flex;
 		flex-direction: column;
-		background-color: #4A392F;
+		justify-content: center;
+	}
+
+	.text-box p {
+		margin-bottom: 1.2rem;
+		line-height: 1.7;
+		font-size: 1.05rem;
+		text-align: justify;
+		color: #333;
+	}
+
+	.text-box footer {
+		margin-top: 1.5rem;
+	}
+
+	.link-like {
+		color: #E34224;
+		font-weight: bold;
+		cursor: pointer;
+		text-decoration: none;
+		display: inline-block;
+	}
+
+	h1,
+	h2,
+	h3 {
+		color: #4A392F;
+	}
+
+	.text-white {
+		color: white;
+	}
+
+	.image.featured img {
+		height: 250px;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	.wrapper.style1 {
+		position: relative;
+	}
+
+
+	.wrapper.style1 {
+		transform: translateY(-1px);
+	}
+
+	.wrapper.style1::before {
+		content: "";
 		position: absolute;
-		top: 60px;
+		top: 0;
 		left: 0;
 		width: 100%;
-		overflow: hidden;
-		max-height: 0;
-		opacity: 0;
-		padding: 0;
-		z-index: 9;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 0;
 	}
 
-	.nav-links.show {
-		max-height: 500px;
-		opacity: 1;
-		padding: 1rem 0;
+	.wrapper.style1 .container {
+		position: relative;
+		z-index: 1;
 	}
-}
+
+
+	.text-white,
+	.text-white * {
+		color: white !important;
+		text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+	}
 
 
 
-	</style>
 
+	/* NAV */
+	#nav {
+		background-color: #4A392F;
+		position: top;
+		/* <-- esta propriedade não é válida, vê nota abaixo */
+		z-index: 10;
+		height: 60px;
+		font-size: 14px;
+		/* ou outro valor mais pequeno como 12px */
+	}
 
+	/* Container interno */
+	.nav-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		padding: 0 20px;
+		max-width: 1200px;
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
 
+	/* Logo */
+	.logo img.logo-img {
+		height: 40px;
+		object-fit: contain;
+		display: block;
+	}
+
+	/* Botão hamburguer */
+	.menu-toggle {
+		display: none;
+		font-size: 2rem;
+		color: white;
+		cursor: pointer;
+		height: 100%;
+
+		align-items: center;
+		padding-left: 10px;
+	}
+
+	/* Menu */
+	.nav-links {
+		display: flex;
+		gap: 20px;
+		list-style: none;
+		margin: 0;
+		transition: max-height 0.4s ease, opacity 0.4s ease;
+	}
+
+	.nav-links li a {
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	/* RESPONSIVO */
+	@media (max-width: 768px) {
+		.menu-toggle {
+			display: flex;
+		}
+
+		.nav-links {
+			flex-direction: column;
+			background-color: #4A392F;
+			position: absolute;
+			top: 60px;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+			max-height: 0;
+			opacity: 0;
+			padding: 0;
+			z-index: 9;
+		}
+
+		.nav-links.show {
+			max-height: 500px;
+			opacity: 1;
+			padding: 1rem 0;
+		}
+	}
+</style>
 
 
 <body class="is-preload">
 
-<nav id="nav">
-  <div class="nav-wrapper">
-    <!-- Logo -->
-    <div class="logo">
-      <a href="#top">
-        <img src="images/logo.png" alt="Logotipo" class="logo-img">
-      </a>
-    </div>
+	<nav id="nav">
+		<div class="nav-wrapper">
+			<!-- Logo -->
+			<div class="logo">
+				<a href="#top">
+					<img src="images/logo.png" alt="Logotipo" class="logo-img">
+				</a>
+			</div>
 
-    <!-- Botão hamburguer -->
-    <div class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu">
-      ☰
-    </div>
+			<!-- Botão hamburguer -->
+			<div class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu">
+				☰
+			</div>
 
-    <!-- Menu -->
-    <ul id="menu" class="nav-links">
-      <li><a href="#top" onclick="closeMenu()" style="color: #E34224;">Início</a></li>
-      <li><a href="#work" onclick="closeMenu()">Sobre Mim</a></li>
-      <li><a href="#portfolio" onclick="closeMenu()">Serviços</a></li>
-      <li><a href="#testemunho" onclick="closeMenu()">Testemunhos</a></li>
-      <li><a href="#contact" onclick="closeMenu()">Contacto</a></li>
-    </ul>
-  </div>
-</nav>
+			<!-- Menu -->
+			<ul id="menu" class="nav-links">
+				<li><a href="#top" onclick="closeMenu()" style="color: #E34224;">Início</a></li>
+				<li><a href="#work" onclick="closeMenu()">Sobre Mim</a></li>
+				<li><a href="#portfolio" onclick="closeMenu()">Serviços</a></li>
+				<li><a href="#testemunho" onclick="closeMenu()">Testemunhos</a></li>
+				<li><a href="#contact" onclick="closeMenu()">Contacto</a></li>
+			</ul>
+		</div>
+	</nav>
 
 
 
 	<!-- Home -->
-<article id="top" class="wrapper style1" style="background: url('images/back_1.jpg') center center / cover no-repeat;">
-	<div class="container">
-<div class="row" style="justify-content: flex-end; text-align: right;">
-	<div class="col-8 col-7-large col-12-medium">
-		<header>
-			<h1 class="text-white">Josué Fonseca</h1>
-		</header>
-		<h2 class="text-white"><strong>Prepara a tua mente da mesma</strong></h2>
-		<h2 class="text-white"><strong>que preparas o teu corpo</strong></h2>
-		<a href="#contact" class="button large scrolly">Agendar Consulta</a>
-	</div>
-</div>
-	</div>
-</article>
+	<article id="top" class="wrapper style1"
+		style="background: url('images/back_1.jpg') center center / cover no-repeat;">
+		<div class="container">
+			<div class="row" style="justify-content: flex-end; text-align: right;">
+				<div class="col-8 col-7-large col-12-medium">
+					<header>
+						<h1 class="text-white">Josué Fonseca</h1>
+					</header>
+					<h2 class="text-white"><strong>Prepara a tua mente da mesma</strong></h2>
+					<h2 class="text-white"><strong>que preparas o teu corpo</strong></h2>
+					<a href="#contact" class="button large scrolly">Agendar Consulta</a>
+				</div>
+			</div>
+		</div>
+	</article>
 
 
 
@@ -329,12 +330,14 @@
 					<div class="text-box">
 
 						<p>
-							O meu sonho era ser <strong>profissional</strong>. Pratiquei várias modalidades: futebol, natação,
+							O meu sonho era ser <strong>profissional</strong>. Pratiquei várias modalidades: futebol,
+							natação,
 							voleibol, futebol americano. Em todas elas, sonhei alto, mas uma a uma, fui desistindo,
 							assim como dos sonhos que as acompanhavam.
 						</p>
 						<p>
-							Mas essas experiências ensinaram-me algo <strong>valioso</strong>: percebi que apesar da paixão pelo
+							Mas essas experiências ensinaram-me algo <strong>valioso</strong>: percebi que apesar da
+							paixão pelo
 							desporto, não tinha as capacidades psicológicas necessárias para vingar na área. Então
 							canalizei essa paixão e dediquei-me à <strong>Psicologia</strong>.
 						</p>
@@ -342,7 +345,8 @@
 							Agarrei-me aos estudos e mergulhei no funcionamento da mente humana. Licenciei-me em
 							Psicologia, realizei Mestrado em Psicologia da Saúde, formei-me em "Equipas de Alto
 							Desempenho" e, pouco a pouco, percebi algo poderoso: Apesar de eu não ter conseguido
-							realizar o meu sonho de ser atleta, <strong>podia ajudar outras pessoas a atingirem os seus!</strong>
+							realizar o meu sonho de ser atleta, <strong>podia ajudar outras pessoas a atingirem os
+								seus!</strong>
 						</p>
 						<p>
 							Foi aí que descobri o meu verdadeiro propósito: ser Psicólogo na área do Desporto. Hoje,
@@ -351,7 +355,8 @@
 							desporto com confiança, alegria e bem-estar.
 						</p>
 						<p>
-							Na minha altura eu não tinha as ferramentas que que agora sei que fazem <strong>toda a diferença,</strong>
+							Na minha altura eu não tinha as ferramentas que que agora sei que fazem <strong>toda a
+								diferença,</strong>
 							mas isso não significa que tu também não as possas ter.
 							Estou aqui para te ajudar a construir a mentalidade necessária para que o teu sonho se torne
 							<strong>realidade</strong>.
@@ -402,7 +407,8 @@
 						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
 					    </p>
 						`)">
-						<a href="javascript:void(0)" class="image featured"><img src="images/psi_des_ind.png" alt="" /></a>
+						<a href="javascript:void(0)" class="image featured"><img src="images/psi_des_ind.png"
+								alt="" /></a>
 						<h3><a href="javascript:void(0)">Consulta de Psicologia Desportiva Individual</a></h3>
 
 					</article>
@@ -427,7 +433,8 @@
 						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
 					    </p>
 						`)">
-						<a href="javascript:void(0)" class="image featured"><img src="images/aco_psi_equipas.png" alt="" /></a>
+						<a href="javascript:void(0)" class="image featured"><img src="images/aco_psi_equipas.png"
+								alt="" /></a>
 						<h3><a href="javascript:void(0)">Acompanhamento Psicológico de Equipas</a></h3>
 
 					</article>
@@ -482,7 +489,8 @@
 						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
 					    </p>
 						`)">
-						<a href="javascript:void(0)" class="image featured"><img src="images/aco_psi_trein.png" alt="" /></a>
+						<a href="javascript:void(0)" class="image featured"><img src="images/aco_psi_trein.png"
+								alt="" /></a>
 						<h3><a href="javascript:void(0)">Acompanhamento Psicológico de Treinadores</a></h3>
 
 					</article>
@@ -494,7 +502,7 @@
 		</div>
 	</article>
 
-	
+
 	<!-- Modal -->
 	<div id="modal"
 		style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
@@ -506,164 +514,187 @@
 	</div>
 
 
-	
 
-			<!-- Testemunhos -->
-			<article id="testemunho" class="wrapper style3" style="background-color: #4A392F;">
-				<div class="container">
-					<header>
-						<h2 style="color: white;">Testemunhos</h2>
-						<p style="color: white;">O que dizem quem já viveu este processo...</p>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h4><a href="#">"Então você ajudou me a libertar um peso enorme que tinha, como por exemplo no futebol quando em algumas situações, eu tinha razão mas tinha medo de demostrar então saía sempre prejudicado, o que já não acontece agora. Também me ajudou a superar o medo de errar. Eu quando falhava por exemplo um passe, ficava com o erro na minha cabeça e consequentemente o resto do jogo já não me corria bem, o que também já não acontece devido a sua ajuda. sinto me uma pessoa mais liberta e com mais confiança"</a></h4>
-								<p>Atleta, 16 anos</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h4><a href="#">"Muito obrigada Josué, só tenho a agradecer a forma como acolheu o António, às vezes que o António pede para ter consulta. "Mãe por favor, esta semana posso falar com o Josué, eu sei que vou ficar melhor " Muito obrigada"
-</a></h4>
-								<p>Mãe de atleta, 9 anos</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h4><a href="#">"Bem procurei este acompanhamento para me poder desenvolver melhor mentalmente, notei grandes diferenças na maneira que via as coisas e em termos de uma comunicação diferente com as pessoas e também no futebol, os trabalhos que fazíamos ajudava me a desenvolver melhor e descobrir uma opinião das coisas que não conseguia."
-</a></h4>
-								<p>Atleta, 16 anos</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-								<h4><a href="#">"Por estarem constantemente a gozar comigo procurei este apoio.
-Sinto me agora mais confiante e com menos medo de errar.
-Foi uma grande ajuda
-E eu gostaria de agradecer por tudo"</a></h4>
-								<p>Atleta, 13 anos</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-								<h4><a href="#">"O que me levou a procurar o acompanhamento psicológico foi quado comecei a reparar a já não estava a evoluir no futebol por motivos mentais e foi aí a percebi q necessitava de acompanhamento psicológico. As maiores mudanças forma perceber como certas coisas como por exemplo q o pensamento mau predomina sempre o nosso cérebro e com o acompanhamento eu comecei a conseguir contornar isso. Alguns medos tambem foram desaparecendo. A minha confiança em tudo. A minha evolução em todos os quesitos que foram trabalhados"
-</a></h4>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<h3><a href="#">Sed amet ornare</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-					</div>
-					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
-					</footer>
+
+	<!-- Testemunhos -->
+	<article id="testemunho" class="wrapper style3" style="background-color: #4A392F;">
+		<div class="container">
+			<header>
+				<h2 style="color: white;">Testemunhos</h2>
+				<p style="color: white;">O que dizem quem já viveu este processo...</p>
+			</header>
+			<div class="row">
+				<div class="col-4 col-6-medium col-12-small">
+					<article class="box style2">
+						<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+						<h4><a href="#">"Então você ajudou me a libertar um peso enorme que tinha, como por exemplo no
+								futebol quando em algumas situações, eu tinha razão mas tinha medo de demostrar então
+								saía sempre prejudicado, o que já não acontece agora. Também me ajudou a superar o medo
+								de errar. Eu quando falhava por exemplo um passe, ficava com o erro na minha cabeça e
+								consequentemente o resto do jogo já não me corria bem, o que também já não acontece
+								devido a sua ajuda. sinto me uma pessoa mais liberta e com mais confiança"</a></h4>
+						<p>Atleta, 16 anos</p>
+					</article>
 				</div>
-			</article>
+				<div class="col-4 col-6-medium col-12-small">
+					<article class="box style2">
+						<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+						<h4><a href="#">"Muito obrigada Josué, só tenho a agradecer a forma como acolheu o António, às
+								vezes que o António pede para ter consulta. "Mãe por favor, esta semana posso falar com
+								o Josué, eu sei que vou ficar melhor " Muito obrigada"
+							</a></h4>
+						<p>Mãe de atleta, 9 anos</p>
+					</article>
+				</div>
+				<div class="col-4 col-6-medium col-12-small">
+					<article class="box style2">
+						<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+						<h4><a href="#">"Bem procurei este acompanhamento para me poder desenvolver melhor mentalmente,
+								notei grandes diferenças na maneira que via as coisas e em termos de uma comunicação
+								diferente com as pessoas e também no futebol, os trabalhos que fazíamos ajudava me a
+								desenvolver melhor e descobrir uma opinião das coisas que não conseguia."
+							</a></h4>
+						<p>Atleta, 16 anos</p>
+					</article>
+				</div>
+				<div class="col-4 col-6-medium col-12-small">
+					<article class="box style2">
+						<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+						<h4><a href="#">"Por estarem constantemente a gozar comigo procurei este apoio.
+								Sinto me agora mais confiante e com menos medo de errar.
+								Foi uma grande ajuda
+								E eu gostaria de agradecer por tudo"</a></h4>
+						<p>Atleta, 13 anos</p>
+					</article>
+				</div>
+				<div class="col-4 col-6-medium col-12-small">
+					<article class="box style2">
+						<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+						<h4><a href="#">"O que me levou a procurar o acompanhamento psicológico foi quado comecei a
+								reparar a já não estava a evoluir no futebol por motivos mentais e foi aí a percebi q
+								necessitava de acompanhamento psicológico. As maiores mudanças forma perceber como
+								certas coisas como por exemplo q o pensamento mau predomina sempre o nosso cérebro e com
+								o acompanhamento eu comecei a conseguir contornar isso. Alguns medos tambem foram
+								desaparecendo. A minha confiança em tudo. A minha evolução em todos os quesitos que
+								foram trabalhados"
+							</a></h4>
+						<p>Ornare nulla proin odio consequat.</p>
+					</article>
+				</div>
+				<div class="col-4 col-6-medium col-12-small">
+					<article class="box style2">
+						<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+						<h3><a href="#">Sed amet ornare</a></h3>
+						<p>Ornare nulla proin odio consequat.</p>
+					</article>
+				</div>
+			</div>
+			<footer>
+				<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
+				<a href="#contact" class="button large scrolly">Get in touch with me</a>
+			</footer>
+		</div>
+	</article>
 
 
 
 
 
 
-<!-- Contact -->
-<article id="contact" class="wrapper style2">
-  <div class="container medium">
-    <header>
-      <h2>Agendar Consulta</h2>
-      <p>Podes saber mais sobre o meu trabalho e sobre a minha equipa através das minhas redes sociais e
-        contactar-me através dos seguintes contactos para esclarecer qualquer dúvida.
-        Também podes fazer aqui o teu pedido de consulta.</p>
-    </header>
+	<!-- Contact -->
+	<article id="contact" class="wrapper style2">
+		<div class="container medium">
+			<header>
+				<h2>Agendar Consulta</h2>
+				<p>Podes saber mais sobre o meu trabalho e sobre a minha equipa através das minhas redes sociais e
+					contactar-me através dos seguintes contactos para esclarecer qualquer dúvida.
+					Também podes fazer aqui o teu pedido de consulta.</p>
+			</header>
 
-    <div class="row">
-      <!-- Imagem lado esquerdo -->
-      <div class="col-6 col-12-small">
-        <img src="images/send_message_1.jpg" alt="Imagem de consulta" style="width:80%; height:auto; text-align: center;" />
-      </div>
+			<div class="row">
+				<!-- Imagem lado esquerdo -->
+				<div class="col-6 col-12-small">
+					<img src="images/send_message_1.jpg" alt="Imagem de consulta"
+						style="width:80%; height:auto; text-align: center;" />
+				</div>
 
-      <!-- Formulário lado direito -->
-      <div class="col-6 col-12-small">
-        <form id="contactForm">
-          <div class="row">
-            <div class="col-6 col-12-small">
-              <input type="text" name="name" id="name" placeholder="Nome" required />
-            </div>
-            <div class="col-6 col-12-small">
-              <input type="email" name="email" id="email" placeholder="Email" required />
-            </div>
-            <div class="col-12">
-              <input type="text" name="subject" id="subject" placeholder="Assunto" required />
-            </div>
-            <div class="col-12">
-              <textarea name="message" id="message"
-                placeholder="Mensagem (breve descrição do pedido ou dúvidas relativamente ao serviço)"
-                required></textarea>
-            </div>
+				<!-- Formulário lado direito -->
+				<div class="col-6 col-12-small">
+					<form id="contactForm">
+						<div class="row">
+							<div class="col-6 col-12-small">
+								<input type="text" name="name" id="name" placeholder="Nome" required />
+							</div>
+							<div class="col-6 col-12-small">
+								<input type="email" name="email" id="email" placeholder="Email" required />
+							</div>
+							<div class="col-12">
+								<input type="text" name="subject" id="subject" placeholder="Assunto" required />
+							</div>
+							<div class="col-12">
+								<textarea name="message" id="message"
+									placeholder="Mensagem (breve descrição do pedido ou dúvidas relativamente ao serviço)"
+									required></textarea>
+							</div>
 
-            <!-- Campos escondidos -->
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="box" />
-            <input type="hidden" name="_autoresponse"
-              value="Olá, recebemos a sua mensagem com sucesso. Entraremos em contacto o mais breve possível." />
+							<!-- Campos escondidos -->
+							<input type="hidden" name="_captcha" value="false" />
+							<input type="hidden" name="_template" value="box" />
+							<input type="hidden" name="_autoresponse"
+								value="Olá, recebemos a sua mensagem com sucesso. Entraremos em contacto o mais breve possível." />
 
-            <div class="col-12">
-              <ul class="actions">
-                <li><input type="submit" class="button large scrolly" value="Enviar Mensagem" /></li>
-              </ul>
-            </div>
-          </div>
-        </form>
+							<div class="col-12">
+								<ul class="actions">
+									<li><input type="submit" class="button large scrolly" value="Enviar Mensagem" />
+									</li>
+								</ul>
+							</div>
+						</div>
+					</form>
 
-        <div id="messageSent" style="display:none; margin-top:20px; color: green; font-weight: bold;">
-          Mensagem enviada com sucesso! Obrigado pelo seu contacto.
-        </div>
-      </div>
-    </div>
+					<div id="messageSent" style="display:none; margin-top:20px; color: green; font-weight: bold;">
+						Mensagem enviada com sucesso! Obrigado pelo seu contacto.
+					</div>
+				</div>
+			</div>
 
-    <div class="row">
-      <div class="col-12">
-        <hr />
-        <h3><strong>Onde me podes encontrar?</strong></h3>
-        <ul class="social">
-          <li><a href="https://www.facebook.com/people/Josu%C3%A9-Fonseca-Psicologia/61562748162794/#"
-              class="icon brands fa-facebook-f" style="background-color: grey;"><span class="label">Facebook</span></a></li>
-          <li><a href="https://www.youtube.com/@Josu%C3%A9_Fonseca_Psic%C3%B3logo"
-              class="icon brands fa-youtube" style="background-color: grey;"><span class="label">YouTube</span></a></li>
-          <li><a href="https://www.instagram.com/josue_psicologo_desporto/#"
-              class="icon brands fa-instagram" style="background-color: grey;"><span class="label">Instagram</span></a></li>
-          <li><a href="https://www.linkedin.com/in/josu%C3%A9-fonseca-853005216/"
-              class="icon brands fa-linkedin-in" style="background-color: grey;"><span class="label">LinkedIn</span></a></li>
-          <li><a href="https://www.tiktok.com/@josue_psi.desporto" class="icon brands fa-tiktok"
-              style="background-color: grey;"><span class="label">TikTok</span></a></li>
-          <li><a href="https://api.whatsapp.com/send/?phone=351917859956&text&type=phone_number&app_absent=0"
-              class="icon brands fa-whatsapp" style="background-color: grey;"><span class="label">Whatsapp</span></a></li>
-        </ul>
-      </div>
-    </div>
+			<div class="row">
+				<div class="col-12">
+					<hr />
+					<h3><strong>Onde me podes encontrar?</strong></h3>
+					<ul class="social">
+						<li><a href="https://www.facebook.com/people/Josu%C3%A9-Fonseca-Psicologia/61562748162794/#"
+								class="icon brands fa-facebook-f" style="background-color: grey;"><span
+									class="label">Facebook</span></a></li>
+						<li><a href="https://www.youtube.com/@Josu%C3%A9_Fonseca_Psic%C3%B3logo"
+								class="icon brands fa-youtube" style="background-color: grey;"><span
+									class="label">YouTube</span></a></li>
+						<li><a href="https://www.instagram.com/josue_psicologo_desporto/#"
+								class="icon brands fa-instagram" style="background-color: grey;"><span
+									class="label">Instagram</span></a></li>
+						<li><a href="https://www.linkedin.com/in/josu%C3%A9-fonseca-853005216/"
+								class="icon brands fa-linkedin-in" style="background-color: grey;"><span
+									class="label">LinkedIn</span></a></li>
+						<li><a href="https://www.tiktok.com/@josue_psi.desporto" class="icon brands fa-tiktok"
+								style="background-color: grey;"><span class="label">TikTok</span></a></li>
+						<li><a href="https://api.whatsapp.com/send/?phone=351917859956&text&type=phone_number&app_absent=0"
+								class="icon brands fa-whatsapp" style="background-color: grey;"><span
+									class="label">Whatsapp</span></a></li>
+					</ul>
+				</div>
+			</div>
 
-    <footer>
-      <ul id="copyright">
-        <li>&copy; Untitled. All rights reserved.</li>
-        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-      </ul>
-    </footer>
-  </div>
-</article>
+			<footer>
+				<ul id="copyright">
+					<li>&copy; Untitled. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+		</div>
+	</article>
 
 
-	
+
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
@@ -678,7 +709,7 @@ E eu gostaria de agradecer por tudo"</a></h4>
 
 		function abrirModal(titulo, conteudo) {
 			document.getElementById('modal-title').innerText = titulo;
-			document.getElementById('modal-text').innerHTML = conteudo; 
+			document.getElementById('modal-text').innerHTML = conteudo;
 			modal.style.display = 'flex';
 			history.pushState({ modalAberto: true }, "Modal Aberto");
 		}
@@ -748,39 +779,39 @@ E eu gostaria de agradecer por tudo"</a></h4>
 		});
 	</script>
 
-	
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-  $(document).on('click', '.scrolly', function (e) {
-    e.preventDefault();
 
-    const target =
-      $(this).attr('href') || $(this).data('target') || $(this).attr('data-href');
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).on('click', '.scrolly', function (e) {
+			e.preventDefault();
 
-    if (typeof fecharModal === 'function') {
-      fecharModal();
-    }
+			const target =
+				$(this).attr('href') || $(this).data('target') || $(this).attr('data-href');
 
-    if (target && target.startsWith('#')) {
-      const $targetElement = $(target);
-      if ($targetElement.length) {
-        $('html, body').animate({
-          scrollTop: $targetElement.offset().top
-        }, 2500); // tempo em milissegundos
-      }
-    }
-  });
-</script>
-<script>
-	function toggleMenu() {
-		const menu = document.getElementById('menu');
-		menu.classList.toggle('show');
-	}
+			if (typeof fecharModal === 'function') {
+				fecharModal();
+			}
 
-	function closeMenu() {
-		document.getElementById('menu').classList.remove('show');
-	}
-</script>
+			if (target && target.startsWith('#')) {
+				const $targetElement = $(target);
+				if ($targetElement.length) {
+					$('html, body').animate({
+						scrollTop: $targetElement.offset().top
+					}, 2500); // tempo em milissegundos
+				}
+			}
+		});
+	</script>
+	<script>
+		function toggleMenu() {
+			const menu = document.getElementById('menu');
+			menu.classList.toggle('show');
+		}
+
+		function closeMenu() {
+			document.getElementById('menu').classList.remove('show');
+		}
+	</script>
 </body>
 
 </html>
