@@ -11,6 +11,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
 </head>
 
@@ -165,9 +166,11 @@
 	/* NAV */
 	#nav {
 		background-color: #4A392F;
-		position: top;
+		position: fixed;
+top: 0;
+width: 100%;
 		/* <-- esta propriedade não é válida, vê nota abaixo */
-		z-index: 10;
+		z-index: 1000;
 		height: 60px;
 		font-size: 14px;
 		/* ou outro valor mais pequeno como 12px */
@@ -245,6 +248,13 @@
 			padding: 1rem 0;
 		}
 	}
+
+
+
+
+
+
+	
 </style>
 
 
@@ -523,72 +533,82 @@
 				<h2 style="color: white;">Testemunhos</h2>
 				<p style="color: white;">O que dizem quem já viveu este processo...</p>
 			</header>
-			<div class="row">
-				<div class="col-4 col-6-medium col-12-small">
-					<article class="box style2">
-						<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-						<h4><a href="#">"Então você ajudou me a libertar um peso enorme que tinha, como por exemplo no
-								futebol quando em algumas situações, eu tinha razão mas tinha medo de demostrar então
-								saía sempre prejudicado, o que já não acontece agora. Também me ajudou a superar o medo
-								de errar. Eu quando falhava por exemplo um passe, ficava com o erro na minha cabeça e
-								consequentemente o resto do jogo já não me corria bem, o que também já não acontece
-								devido a sua ajuda. sinto me uma pessoa mais liberta e com mais confiança"</a></h4>
-						<p>Atleta, 16 anos</p>
-					</article>
-				</div>
-				<div class="col-4 col-6-medium col-12-small">
-					<article class="box style2">
-						<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-						<h4><a href="#">"Muito obrigada Josué, só tenho a agradecer a forma como acolheu o António, às
-								vezes que o António pede para ter consulta. "Mãe por favor, esta semana posso falar com
-								o Josué, eu sei que vou ficar melhor " Muito obrigada"
-							</a></h4>
-						<p>Mãe de atleta, 9 anos</p>
-					</article>
-				</div>
-				<div class="col-4 col-6-medium col-12-small">
-					<article class="box style2">
-						<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-						<h4><a href="#">"Bem procurei este acompanhamento para me poder desenvolver melhor mentalmente,
-								notei grandes diferenças na maneira que via as coisas e em termos de uma comunicação
-								diferente com as pessoas e também no futebol, os trabalhos que fazíamos ajudava me a
-								desenvolver melhor e descobrir uma opinião das coisas que não conseguia."
-							</a></h4>
-						<p>Atleta, 16 anos</p>
-					</article>
-				</div>
-				<div class="col-4 col-6-medium col-12-small">
-					<article class="box style2">
-						<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-						<h4><a href="#">"Por estarem constantemente a gozar comigo procurei este apoio.
-								Sinto me agora mais confiante e com menos medo de errar.
-								Foi uma grande ajuda
-								E eu gostaria de agradecer por tudo"</a></h4>
-						<p>Atleta, 13 anos</p>
-					</article>
-				</div>
-				<div class="col-4 col-6-medium col-12-small">
-					<article class="box style2">
-						<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-						<h4><a href="#">"O que me levou a procurar o acompanhamento psicológico foi quado comecei a
-								reparar a já não estava a evoluir no futebol por motivos mentais e foi aí a percebi q
-								necessitava de acompanhamento psicológico. As maiores mudanças forma perceber como
-								certas coisas como por exemplo q o pensamento mau predomina sempre o nosso cérebro e com
-								o acompanhamento eu comecei a conseguir contornar isso. Alguns medos tambem foram
-								desaparecendo. A minha confiança em tudo. A minha evolução em todos os quesitos que
-								foram trabalhados"
-							</a></h4>
-						<p>Ornare nulla proin odio consequat.</p>
-					</article>
-				</div>
-				<div class="col-4 col-6-medium col-12-small">
-					<article class="box style2">
-						<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-						<h3><a href="#">Sed amet ornare</a></h3>
-						<p>Ornare nulla proin odio consequat.</p>
-					</article>
-				</div>
-			</div>
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+
+    <!-- Testemunho 1 -->
+    <div class="swiper-slide">
+      <article class="box style2" style="text-align: center;">
+        <a href="#" class="image featured">
+          <img src="images/pic01.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+        </a>
+        <p><em>"Então você ajudou me a libertar um peso enorme que tinha, como por exemplo no futebol quando em algumas situações, eu tinha razão mas tinha medo de demonstrar então saía sempre prejudicado, o que já não acontece agora. Também me ajudou a superar o medo de errar. Eu quando falhava por exemplo um passe, ficava com o erro na minha cabeça e consequentemente o resto do jogo já não me corria bem, o que também já não acontece devido à sua ajuda. Sinto-me uma pessoa mais liberta e com mais confiança."</em></p>
+        <p style="margin-bottom: 1em;"><strong>Atleta, 16 anos</strong></p>
+      </article>
+    </div>
+
+    <!-- Testemunho 2 -->
+    <div class="swiper-slide">
+      <article class="box style2" style="text-align: center;">
+        <a href="#" class="image featured">
+          <img src="images/pic02.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+        </a>
+        <p><em>"Muito obrigada Josué, só tenho a agradecer a forma como acolheu o António, às vezes que o António pede para ter consulta. 'Mãe por favor, esta semana posso falar com o Josué, eu sei que vou ficar melhor'. Muito obrigada."</em></p>
+        <p style="margin-bottom: 1em;"><strong>Mãe de atleta, 9 anos</strong></p>
+      </article>
+    </div>
+
+    <!-- Testemunho 3 -->
+    <div class="swiper-slide">
+      <article class="box style2" style="text-align: center;">
+        <a href="#" class="image featured">
+          <img src="images/pic03.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+        </a>
+        <p><em>"Bem procurei este acompanhamento para me poder desenvolver melhor mentalmente, notei grandes diferenças na maneira que via as coisas e em termos de uma comunicação diferente com as pessoas e também no futebol, os trabalhos que fazíamos ajudavam-me a desenvolver melhor e descobrir uma opinião das coisas que não conseguia."</em></p>
+        <p style="margin-bottom: 1em;"><strong>Atleta, 16 anos</strong></p>
+      </article>
+    </div>
+
+    <!-- Testemunho 4 -->
+    <div class="swiper-slide">
+      <article class="box style2" style="text-align: center;">
+        <a href="#" class="image featured">
+          <img src="images/pic04.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+        </a>
+        <p><em>"Por estarem constantemente a gozar comigo procurei este apoio. Sinto-me agora mais confiante e com menos medo de errar. Foi uma grande ajuda. E eu gostaria de agradecer por tudo."</em></p>
+        <p style="margin-bottom: 1em;"><strong>Atleta, 13 anos</strong></p>
+      </article>
+    </div>
+
+    <!-- Testemunho 5 -->
+    <div class="swiper-slide">
+      <article class="box style2" style="text-align: center;">
+        <a href="#" class="image featured">
+          <img src="images/pic05.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+        </a>
+        <p><em>"O que me levou a procurar o acompanhamento psicológico foi quando comecei a reparar que já não estava a evoluir no futebol por motivos mentais e foi aí que percebi que necessitava de acompanhamento psicológico. As maiores mudanças foram perceber como certas coisas, como por exemplo que o pensamento mau predomina sempre o nosso cérebro, e com o acompanhamento eu comecei a conseguir contornar isso. Alguns medos também foram desaparecendo. A minha confiança em tudo. A minha evolução em todos os quesitos que foram trabalhados."</em></p>
+        <p style="margin-bottom: 1em;"><strong>Atleta</strong></p>
+      </article>
+    </div>
+
+    <!-- Testemunho 6 (placeholder) -->
+    <div class="swiper-slide">
+      <article class="box style2" style="text-align: center;">
+        <a href="#" class="image featured">
+          <img src="images/pic06.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+        </a>
+        <p><em>"Sed amet ornare."</em></p>
+        <p style="margin-bottom: 1em;"><strong>Ornare nulla proin odio consequat.</strong></p>
+      </article>
+    </div>
+
+  </div>
+
+  <!-- Botões de navegação (opcional) -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
 			<footer>
 				<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
 				<a href="#contact" class="button large scrolly">Get in touch with me</a>
@@ -626,7 +646,7 @@
 								<input type="text" name="name" id="name" placeholder="Nome" required />
 							</div>
 							<div class="col-6 col-12-small">
-								<input type="email" name="email" id="email" placeholder="Email" required />
+								<input type="email" name="email" id="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
 							</div>
 							<div class="col-12">
 								<input type="text" name="subject" id="subject" placeholder="Assunto" required />
@@ -812,6 +832,35 @@
 			document.getElementById('menu').classList.remove('show');
 		}
 	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      480: {
+        slidesPerView: 1,
+      }
+    }
+  });
+</script>
+
 </body>
 
 </html>
