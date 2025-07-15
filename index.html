@@ -125,7 +125,7 @@
 	}
 
 	.image.featured img {
-		height: 250px;
+		height: 100%;
 		width: 100%;
 		object-fit: cover;
 	}
@@ -255,7 +255,6 @@ width: 100%;
 
 
 
-
 /* Garantir que o container ocupa 100% e está centrado */
 .swiper {
   width: 100%;
@@ -282,7 +281,6 @@ width: 100%;
 .testemunho-card,
 .box.style2 {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
   padding: 2em;
   max-width: 700px;
   margin: 0 auto;
@@ -293,8 +291,6 @@ width: 100%;
   z-index: 1;
 }
 
-
-/* Texto com aspas */
 .testemunho-aspas {
   font-size: 1.2em;
   font-style: italic;
@@ -302,32 +298,33 @@ width: 100%;
   padding: 1em 2em;
   color: #4A392F;
   position: relative;
-  z-index: 1;
+  z-index: 2; /* aumentar para garantir que o texto está acima das aspas */
   margin-bottom: 1em;
 }
 
-/* Aspas */
+/* Aspas decorativas */
 .testemunho-aspas::before,
 .testemunho-aspas::after {
   font-family: serif;
   font-size: 4em;
   color: #E34224;
   position: absolute;
-  z-index: 0;
+  z-index: 1; /* menor que o z-index do texto */
   opacity: 1;
   pointer-events: none;
 }
 
+/* Opcional: posicionamento das aspas esquerda e direita */
 .testemunho-aspas::before {
   content: "“";
+  left: 0;
   top: -20px;
-  left: 10px;
 }
 
 .testemunho-aspas::after {
   content: "”";
+  right: 0;
   bottom: -20px;
-  right: 10px;
 }
 
 /* Nome do autor */
@@ -399,6 +396,16 @@ width: 100%;
   .swiper-button-prev {
     display: none;
   }
+}
+
+
+.testemunho-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 1em auto 0;
 }
 
 </style>
@@ -563,7 +570,7 @@ width: 100%;
 						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
 					    </p>
 						`)">
-						<a href="javascript:void(0)" class="image featured"><img src="images/psi_des_ind.png"alt="" /></a>
+						<a href="javascript:void(0)" class="image featured"><img src="images/Psicologia_Desportiv_Individual.jpg"alt="" /></a>
 						<h3><a href="javascript:void(0)">Consulta de Psicologia Desportiva Individual</a></h3>
 
 					</article>
@@ -588,7 +595,7 @@ width: 100%;
 						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
 					    </p>
 						`)">
-						<a href="javascript:void(0)" class="image featured"><img src="images/aco_psi_equipas.png"
+						<a href="javascript:void(0)" class="image featured"><img src="images/Aco_Psicologico_Equipas.jpg"
 								alt="" /></a>
 						<h3><a href="javascript:void(0)">Acompanhamento Psicológico de Equipas</a></h3>
 
@@ -616,7 +623,7 @@ width: 100%;
 					    </p>
 						`)">
 
-						<a href="javascript:void(0)" class="image featured"><img src="images/aco_pare.png" alt="" /></a>
+						<a href="javascript:void(0)" class="image featured"><img src="images/Aco_Psicologico_Parental.jpg" alt="" /></a>
 						<h3><a href="javascript:void(0)">Aconselhamento </br> Parental</a></h3>
 
 					</article>
@@ -644,7 +651,7 @@ width: 100%;
 						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
 					    </p>
 						`)">
-						<a href="javascript:void(0)" class="image featured"><img src="images/aco_psi_trein.png"
+						<a href="javascript:void(0)" class="image featured"><img src="images/Aco_Psicologico_Treinadores.jpg"
 								alt="" /></a>
 						<h3><a href="javascript:void(0)">Acompanhamento Psicológico de Treinadores</a></h3>
 
@@ -672,7 +679,7 @@ width: 100%;
 
 
 <!-- Testemunhos -->
-<article id="testemunho" class="wrapper style3";">
+<article id="testemunho" class="wrapper style3">
   <div class="container">
     <header style="text-align: center; padding-top: 2em;">
       <h2>O que dizem quem já viveu este processo...</h2>
@@ -685,7 +692,7 @@ width: 100%;
    <!-- Testemunho 1 -->
     <div class="swiper-slide">
       <article class="box style2" style="text-align: center;">
-        <a href="#" class="image featured">
+        <a href="#" class="testemunho-img">
           <img src="images/pic01.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
         </a>
         <p class="testemunho-aspas"><em>Então você ajudou me a libertar um peso enorme que tinha, como por exemplo no futebol quando em algumas situações, eu tinha razão mas tinha medo de demonstrar então saía sempre prejudicado, o que já não acontece agora. Também me ajudou a superar o medo de errar. Eu quando falhava por exemplo um passe, ficava com o erro na minha cabeça e consequentemente o resto do jogo já não me corria bem, o que também já não acontece devido à sua ajuda. Sinto-me uma pessoa mais liberta e com mais confiança.</em></p>
@@ -697,7 +704,7 @@ width: 100%;
     <!-- Testemunho 2 -->
     <div class="swiper-slide">
       <article class="box style2" style="text-align: center;">
-        <a href="#" class="image featured">
+        <a href="#" class="testemunho-img">
           <img src="images/pic02.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
         </a>
         <p class="testemunho-aspas"><em>Muito obrigada Josué, só tenho a agradecer a forma como acolheu o António, às vezes que o António pede para ter consulta. 'Mãe por favor, esta semana posso falar com o Josué, eu sei que vou ficar melhor'. Muito obrigada.</em></p>
@@ -708,7 +715,7 @@ width: 100%;
     <!-- Testemunho 3 -->
     <div class="swiper-slide">
       <article class="box style2" style="text-align: center;">
-        <a href="#" class="image featured">
+        <a href="#" class="testemunho-img">
           <img src="images/pic03.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
         </a>
         <p class="testemunho-aspas"><em>Bem procurei este acompanhamento para me poder desenvolver melhor mentalmente, notei grandes diferenças na maneira que via as coisas e em termos de uma comunicação diferente com as pessoas e também no futebol, os trabalhos que fazíamos ajudavam-me a desenvolver melhor e descobrir uma opinião das coisas que não conseguia.</em></p>
@@ -719,7 +726,7 @@ width: 100%;
     <!-- Testemunho 4 -->
     <div class="swiper-slide">
       <article class="box style2" style="text-align: center;">
-        <a href="#" class="image featured">
+        <a href="#" class="testemunho-img">
           <img src="images/pic04.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
         </a>
         <p class="testemunho-aspas"><em>Por estarem constantemente a gozar comigo procurei este apoio. Sinto-me agora mais confiante e com menos medo de errar. Foi uma grande ajuda. E eu gostaria de agradecer por tudo.</em></p>
@@ -730,7 +737,7 @@ width: 100%;
     <!-- Testemunho 5 -->
     <div class="swiper-slide">
       <article class="box style2" style="text-align: center;">
-        <a href="#" class="image featured">
+        <a href="#" class="testemunho-img">
           <img src="images/pic05.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
         </a>
         <p class="testemunho-aspas"><em>O que me levou a procurar o acompanhamento psicológico foi quando comecei a reparar que já não estava a evoluir no futebol por motivos mentais e foi aí que percebi que necessitava de acompanhamento psicológico. As maiores mudanças foram perceber como certas coisas, como por exemplo que o pensamento mau predomina sempre o nosso cérebro, e com o acompanhamento eu comecei a conseguir contornar isso. Alguns medos também foram desaparecendo. A minha confiança em tudo. A minha evolução em todos os quesitos que foram trabalhados.</em></p>
@@ -741,10 +748,10 @@ width: 100%;
     <!-- Testemunho 6 (placeholder) -->
     <div class="swiper-slide">
       <article class="box style2" style="text-align: center;">
-        <a href="#" class="image featured">
+        <a href="#" class="testemunho-img">
           <img src="images/pic06.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
         </a>
-        <p class="testemunho-aspas"><em>"Sed amet ornare."</em></p>
+        <p class="testemunho-aspas"><em>Sed amet ornare.</em></p>
         <p style="margin-bottom: 1em;"><strong>Ornare nulla proin odio consequat.</strong></p>
       </article>
     </div>
@@ -790,7 +797,7 @@ width: 100%;
 								<input type="text" name="name" id="name" placeholder="Nome" required />
 							</div>
 							<div class="col-6 col-12-small">
-								<input type="email" name="email" id="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+								<input type="email" name="email" id="email" placeholder="Email" required />
 							</div>
 							<div class="col-12">
 								<input type="text" name="subject" id="subject" placeholder="Assunto" required />
@@ -809,7 +816,16 @@ width: 100%;
 
 							<div class="col-12">
 								<ul class="actions">
-									<li><input type="submit" class="button large scrolly" value="Enviar Mensagem" />
+									<li><input type="submit" style="background: #E34224;
+		color: white;
+		padding: 1em 2em;
+		border-radius: 0;
+		text-decoration: none;
+		display: inline-block;
+		font-weight: bold;
+		font-size: 16px;
+		text-align: center;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);" value="Enviar Mensagem" />
 									</li>
 								</ul>
 							</div>
@@ -898,42 +914,53 @@ width: 100%;
 		});
 	</script>
 
-	<script>
-		const form = document.getElementById('contactForm');
-		const messageSent = document.getElementById('messageSent');
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+	console.log("DOM totalmente carregado.");
 
-		form.addEventListener('submit', function (event) {
-			event.preventDefault(); // evita reload da página
+	const form = document.getElementById('contactForm');
+	const messageSent = document.getElementById('messageSent');
 
-			const formData = new FormData(form);
+	if (!form) {
+		console.error("Formulário com id 'contactForm' não encontrado.");
+		return;
+	}
 
-			fetch('https://formsubmit.co/ajax/pedro10pires@gmail.com', {
-				method: 'POST',
-				body: formData,
-				headers: {
-					'Accept': 'application/json'
+	form.addEventListener('submit', function (event) {
+		event.preventDefault(); // evita reload da página
+		console.log("Formulário submetido.");
+
+		const formData = new FormData(form);
+
+		fetch('https://formsubmit.co/ajax/pedro10pires@gmail.com', {
+			method: 'POST',
+			body: formData,
+			headers: {
+				'Accept': 'application/json'
+			}
+		})
+			.then(response => {
+				console.log("Resposta recebida:", response);
+				if (response.ok) {
+					form.style.display = 'none';
+					messageSent.style.display = 'block';
+				} else {
+					return response.json().then(data => {
+						if (Object.hasOwn(data, 'errors')) {
+							alert(data["errors"].map(error => error["message"]).join(", "));
+						} else {
+							alert("Ocorreu um erro ao enviar a mensagem.");
+						}
+					});
 				}
 			})
-				.then(response => {
-					if (response.ok) {
-						form.style.display = 'none';  // esconde o formulário
-						messageSent.style.display = 'block';  // mostra a mensagem
-					} else {
-						return response.json().then(data => {
-							if (Object.hasOwn(data, 'errors')) {
-								alert(data["errors"].map(error => error["message"]).join(", "));
-							} else {
-								alert("Ocorreu um erro ao enviar a mensagem.");
-							}
-						})
-					}
-				})
-				.catch(error => {
-					alert("Ocorreu um erro ao enviar a mensagem.");
-					console.error(error);
-				});
-		});
-	</script>
+			.catch(error => {
+				alert("Erro ao enviar a mensagem.");
+				console.error("Erro no fetch:", error);
+			});
+	});
+});
+</script>
 
 	<script>
 		document.getElementById("toggleButton").addEventListener("click", function () {
