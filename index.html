@@ -28,6 +28,14 @@
 		z-index: 1;
 	}
 
+	/* >>> ADICIONADO: responsividade para mobile <<< */
+	@media screen and (max-width: 736px) {
+		.box.style2 {
+			max-width: 100% !important;
+			width: 100% !important;
+		}
+	}
+
 	.button.large.scrolly {
 		background: #E34224;
 		color: white;
@@ -125,22 +133,17 @@
 	}
 
 	.image.featured img {
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
+		height: 100% !important;
+		width: 100% !important;
+		object-fit: cover !important;
 	}
 
-.wrapper {
-
-	padding: 5em 0 5em 0;
-}
+	.wrapper {
+		padding: 5em 0 5em 0;
+	}
 
 	.wrapper.style1 {
 		position: relative;
-	}
-
-
-	.wrapper.style1 {
 		transform: translateY(-1px);
 	}
 
@@ -160,27 +163,21 @@
 		z-index: 1;
 	}
 
-
 	.text-white,
 	.text-white * {
 		color: white !important;
 		text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 	}
 
-
-
-
 	/* NAV */
 	#nav {
 		background-color: #4A392F;
 		position: fixed;
-top: 0;
-width: 100%;
-		/* <-- esta propriedade não é válida, vê nota abaixo */
+		top: 0;
+		width: 100%;
 		z-index: 1000;
 		height: 60px;
 		font-size: 14px;
-		/* ou outro valor mais pequeno como 12px */
 	}
 
 	/* Container interno */
@@ -209,7 +206,6 @@ width: 100%;
 		color: white;
 		cursor: pointer;
 		height: 100%;
-
 		align-items: center;
 		padding-left: 10px;
 	}
@@ -256,164 +252,153 @@ width: 100%;
 		}
 	}
 
+	/* Garantir que o container ocupa 100% e está centrado */
+	.swiper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
+	.swiper-wrapper {
+		display: flex;
+		align-items: center;
+	}
 
+	.swiper-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		box-sizing: border-box;
+	}
 
+	.testemunho-card,
+	.box.style2 {
+		background: rgba(255, 255, 255, 0.05);
+		padding: 2em;
+		max-width: 700px;
+		margin: 0 auto;
+		text-align: center;
+		color: white;
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+		position: relative;
+		z-index: 1;
+	}
 
-/* Garantir que o container ocupa 100% e está centrado */
-.swiper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+	.testemunho-aspas {
+		font-size: 1.2em;
+		font-style: italic;
+		line-height: 1.8;
+		padding: 1em 2em;
+		color: #4A392F;
+		position: relative;
+		z-index: 2;
+		margin-bottom: 1em;
+	}
 
-/* O wrapper deve estar centrado e não cortar os slides */
-.swiper-wrapper {
-  display: flex;
-  align-items: center;
-}
+	.testemunho-aspas::before,
+	.testemunho-aspas::after {
+		font-family: serif;
+		font-size: 4em;
+		color: #E34224;
+		position: absolute;
+		z-index: 1;
+		opacity: 1;
+		pointer-events: none;
+	}
 
-/* Cada slide deve ocupar toda a largura disponível */
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-/* Cartão de testemunho */
-.testemunho-card,
-.box.style2 {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2em;
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  color: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 1;
-}
+	.testemunho-aspas::before {
+		content: "“";
+		left: 0;
+		top: -20px;
+	}
 
-.testemunho-aspas {
-  font-size: 1.2em;
-  font-style: italic;
-  line-height: 1.8;
-  padding: 1em 2em;
-  color: #4A392F;
-  position: relative;
-  z-index: 2; /* aumentar para garantir que o texto está acima das aspas */
-  margin-bottom: 1em;
-}
+	.testemunho-aspas::after {
+		content: "”";
+		right: 0;
+		bottom: -20px;
+	}
 
-/* Aspas decorativas */
-.testemunho-aspas::before,
-.testemunho-aspas::after {
-  font-family: serif;
-  font-size: 4em;
-  color: #E34224;
-  position: absolute;
-  z-index: 1; /* menor que o z-index do texto */
-  opacity: 1;
-  pointer-events: none;
-}
+	.testemunho-autor,
+	.box.style2 strong {
+		font-weight: bold;
+		color: #E34224;
+	}
 
-/* Opcional: posicionamento das aspas esquerda e direita */
-.testemunho-aspas::before {
-  content: "“";
-  left: 0;
-  top: -20px;
-}
+	.swiper {
+		padding: 4em 0 6em;
+		position: relative;
+		text-align: center;
+	}
 
-.testemunho-aspas::after {
-  content: "”";
-  right: 0;
-  bottom: -20px;
-}
+	.custom-nav {
+		color: #E34224;
+		width: 45px;
+		height: 45px;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background 0.3s;
+		z-index: 10;
+	}
 
-/* Nome do autor */
-.testemunho-autor,
-.box.style2 strong {
-  font-weight: bold;
-  color: #E34224;
-}
+	.custom-nav:hover {
+		background: rgba(255, 255, 255, 0.2);
+	}
 
-/* Swiper Container */
-.swiper {
-  padding: 4em 0 6em;
-  position: relative;
-  text-align: center;
-}
+	.swiper-button-next,
+	.swiper-button-prev {
+		top: 50%;
+		transform: translateY(-50%);
+	}
 
-/* Setas */
-.custom-nav {
-  color: #E34224;
-  width: 45px;
-  height: 45px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s;
-  z-index: 10;
-}
+	.swiper-button-next::after,
+	.swiper-button-prev::after {
+		font-size: 1.5em;
+	}
 
-.custom-nav:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
+	.swiper-button-next {
+		right: 10px;
+	}
 
-.swiper-button-next,
-.swiper-button-prev {
-  top: 50%;
-  transform: translateY(-50%);
-}
+	.swiper-button-prev {
+		left: 10px;
+	}
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 1.5em;
-}
+	@media (max-width: 768px) {
+		.testemunho-aspas {
+			font-size: 1.1em;
+			padding: 1em;
+		}
 
-.swiper-button-next {
-  right: 10px;
-}
+		.testemunho-aspas::before,
+		.testemunho-aspas::after {
+			font-size: 3em;
+			top: -10px;
+			bottom: -10px;
+		}
 
-.swiper-button-prev {
-  left: 10px;
-}
+		.swiper-button-next,
+		.swiper-button-prev {
+			display: none;
+		}
+	}
 
-/* Mobile Responsivo */
-@media (max-width: 768px) {
-  .testemunho-aspas {
-    font-size: 1.1em;
-    padding: 1em;
-  }
+	.testemunho-img {
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+		border-radius: 50%;
+		display: block;
+		margin: 1em auto 0;
+	}
 
-  .testemunho-aspas::before,
-  .testemunho-aspas::after {
-    font-size: 3em;
-    top: -10px;
-    bottom: -10px;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-  }
-}
-
-
-.testemunho-img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 1em auto 0;
-}
-
+	
 </style>
+
 
 
 <body class="is-preload">
@@ -690,29 +675,43 @@ width: 100%;
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured" style="height: 350px;"><img src="images/dd.jpeg" alt="" /></a>
-								<h3><a href="#">Duarte Diogo</a></h3>
-								<p style="color: #888888;">Algo deste</p>
-								<p style="color: #888888;">Género</p>
-								<p style="color: #888888;">Mais ou menos assim?</p>
+								<a href="#" class="image featured" style="height: 350px;"><img src="images/team1.jpg" alt="" /></a>
+								<h3><a href="#">Emanuel Dias</a></h3>
+								<h4 style="color: #888888;">Psicólogo</h4>
+								<ul style='display: inline-block; text-align: left; color: #333333;'>
+									<li>Mestrado em Psicologia da Educação e do Desenvolvimento Humano</li>
+									<li>Especialização Avançada em Psicologia do Desporto, Exercício e Performance</li>
+									<li>Experiência em clubes como Dragon Force FC Porto e Arsenal Clube da Maia</li>
+									<li>Experiência nas modalidades de Futebol, Futsal, Hóquei em Patins, Andebol e Voleibol</li>
+								</ul>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured" style="height: 350px;"><img src="images/Eu.jpg" alt="" /></a>
-								<h3><a href="#">Pedro Pires</a></h3>
-							<p style="color: #888888;">Algo deste</p>
-								<p style="color: #888888;">Género</p>
-								<p style="color: #888888;">Mais ou menos assim?</p>
+								<a href="#" class="image featured" style="height: 350px;"><img src="images/team2.jpg" alt="" /></a>
+								<h3><a href="#">Tiago Costa</a></h3>
+								<h4 style="color: #888888;">Psicólogo</h4>
+								<ul style='display: inline-block; text-align: left; color: #333333;'>
+									<li>Mestrado em Psicologia Clínica e da Saúde</li>
+									<li>Especialização Avançada em Psicologia do Desporto, Exercício e Performance</li>
+									<li>Formação complementar em Psicologia do Alto Rendimento e Desenvolvimento de Atletas pelo Barcelona Innovation Hub</li>
+									<li>Experiência em clubes como Dragon Force FC Porto e Académico FC</li>
+									<li>Experiência nas modalidades de Futebol, Andebol, Basquetebol e Hóquei e Bilhar</li>
+								</ul>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured" style="height: 350px;"><img src="images/margarida.jpg" alt="" /></a>
-								<h3><a href="#">Margarida Corceiro</a></h3>
-							<p style="color: #888888;">Algo deste</p>
-								<p style="color: #888888;">Género</p>
-								<p style="color: #888888;">Mais ou menos assim?</p>
+								<a href="#" class="image featured" style="height: 350px;"><img src="images/team3.JPG" alt="" /></a>
+								<h3><a href="#">Andreia Ferraz</a></h3>
+								<h4 style="color: #888888;">Psicóloga</h4>
+								<ul style='display: inline-block; text-align: left; color: #333333;'>
+									<li>Mestrado integrado em Psicologia, com especialização em Psicologia das Organizações, Social e do Trabalho</li>
+									<li>Formação complementar em Psicologia para o Treinador no Alto Rendimento e Psicologia para o Desenvolvimento de Atletas pelo Barcelona Innovation Hub</li>
+									<li>Formação complementar em Psicologia para o Alto Rendimento pelo FC Porto Football Sciences Institute</li>
+									<li>Experiência em clubes como Boavista FC, FC Porto e SC Braga</li>
+									<li>Experiência nas modalidades de Futebol, Ginástica, Basquetebol, Hóquei, Voleibol, Remo, Canoagem e Esgrima</li>
+								</ul>
 							</article>
 						</div>
 				</div>
