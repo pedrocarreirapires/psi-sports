@@ -396,7 +396,32 @@
 		margin: 1em auto 0;
 	}
 
-	
+#team .row {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+#team .row > div {
+    display: flex;
+}
+
+#team .box.style2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*@media screen and (max-width: 768px) { 
+ Evita que listas fiquem demasiado largas/pisadas no mobile 
+  #team .box.style2 ul,
+  #portfolio .box.style2 ul {
+    margin: .5rem 1rem 1rem;
+    max-height: 180px;
+    overflow: auto;
+  }
+} */
 </style>
 
 
