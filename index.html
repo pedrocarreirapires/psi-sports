@@ -11,8 +11,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 
 </head>
@@ -286,39 +286,77 @@
 		z-index: 1;
 	}
 
-	.testemunho-aspas {
-		font-size: 1.2em;
-		font-style: italic;
-		line-height: 1.8;
-		padding: 1em 2em;
-		color: #4A392F;
-		position: relative;
-		z-index: 2;
-		margin-bottom: 1em;
-	}
+	
+.testemunho-aspas {
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.8;
+    padding: 1em 2em;
+    color: #4A392F;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1em;
+    overflow: visible; /* Garante que as aspas não sejam cortadas */
+}
 
-	.testemunho-aspas::before,
-	.testemunho-aspas::after {
-		font-family: serif;
-		font-size: 4em;
-		color: #E34224;
-		position: absolute;
-		z-index: 1;
-		opacity: 1;
-		pointer-events: none;
-	}
+.testemunho-aspas::before,
+.testemunho-aspas::after {
+    font-family: serif;
+    font-size: 3em; /* Reduzido para melhor proporção */
+    color: #E34224;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    pointer-events: none;
+    line-height: 1;
+}
 
-	.testemunho-aspas::before {
-		content: "“";
-		left: 0;
-		top: -20px;
-	}
+.testemunho-aspas::before {
+    content: "“";
+    left: -20px; /* Ajustado para melhor alinhamento horizontal */
+    top: 0;      /* Alinhado com o topo do texto */
+}
 
-	.testemunho-aspas::after {
-		content: "”";
-		right: 0;
-		bottom: -20px;
-	}
+.testemunho-aspas::after {
+    content: "”";
+    right: -20px; /* Ajustado para melhor alinhamento horizontal */
+    bottom: 0;    /* Alinhado com a base do texto */
+}
+
+
+@media (max-width: 768px) {
+    .testemunho-aspas {
+        font-size: 1.1em;
+        padding: 1em;
+        position: relative;
+        overflow: visible;
+    }
+
+    .testemunho-aspas::before,
+    .testemunho-aspas::after {
+        font-size: 2.5em;
+        position: absolute;
+        color: #E34224;
+        pointer-events: none;
+        line-height: 1;
+    }
+
+    .testemunho-aspas::before {
+        content: "“";
+        left: -10px;
+        top: -10px;
+    }
+
+    .testemunho-aspas::after {
+        content: "”";
+        right: -10px;
+        top: auto;
+        bottom: -10px; /* Esta linha garante que a aspa final fique em baixo */
+    }
+}
+
+
+
 
 	.testemunho-autor,
 	.box.style2 strong {
@@ -396,24 +434,24 @@
 		margin: 1em auto 0;
 	}
 
-#team .row {
-    display: flex !important;
-    flex-wrap: wrap;
-    align-items: stretch;
-}
+	#team .row {
+		display: flex !important;
+		flex-wrap: wrap;
+		align-items: stretch;
+	}
 
-#team .row > div {
-    display: flex;
-}
+	#team .row>div {
+		display: flex;
+	}
 
-#team .box.style2 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
+	#team .box.style2 {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
 
 
-/*@media screen and (max-width: 768px) { 
+	/*@media screen and (max-width: 768px) { 
  Evita que listas fiquem demasiado largas/pisadas no mobile 
   #team .box.style2 ul,
   #portfolio .box.style2 ul {
@@ -466,7 +504,7 @@
 						<h1 class="text-white">Josué Fonseca</h1>
 					</header>
 					<h2 class="text-white"><strong>Prepara a tua mente da mesma</strong></h2>
-					<h2 class="text-white"><strong>que preparas o teu corpo</strong></h2>
+					<h2 class="text-white"><strong>forma que preparas o teu corpo</strong></h2>
 					<a href="#contact" class="button large scrolly">Agendar Consulta</a>
 				</div>
 			</div>
@@ -586,7 +624,8 @@
 						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
 					    </p>
 						`)">
-						<a href="javascript:void(0)" class="image featured"><img src="images/Psicologia_Desportiv_Individual.jpg"alt="" /></a>
+						<a href="javascript:void(0)" class="image featured"><img
+								src="images/Psicologia_Desportiv_Individual.jpg" alt="" /></a>
 						<h3><a href="javascript:void(0)">Consulta de Psicologia Desportiva Individual</a></h3>
 
 					</article>
@@ -611,8 +650,8 @@
 						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
 					    </p>
 						`)">
-						<a href="javascript:void(0)" class="image featured"><img src="images/Aco_Psicologico_Equipas.jpg"
-								alt="" /></a>
+						<a href="javascript:void(0)" class="image featured"><img
+								src="images/Aco_Psicologico_Equipas.jpg" alt="" /></a>
 						<h3><a href="javascript:void(0)">Acompanhamento Psicológico de Equipas</a></h3>
 
 					</article>
@@ -639,7 +678,8 @@
 					    </p>
 						`)">
 
-						<a href="javascript:void(0)" class="image featured"><img src="images/Aco_Psicologico_Parental.jpg" alt="" /></a>
+						<a href="javascript:void(0)" class="image featured"><img
+								src="images/Aco_Psicologico_Parental.jpg" alt="" /></a>
 						<h3><a href="javascript:void(0)">Aconselhamento </br> Parental</a></h3>
 
 					</article>
@@ -667,8 +707,8 @@
 						<a href='#contact' class='button large scrolly'>Agendar Consulta</a>
 					    </p>
 						`)">
-						<a href="javascript:void(0)" class="image featured"><img src="images/Aco_Psicologico_Treinadores.jpg"
-								alt="" /></a>
+						<a href="javascript:void(0)" class="image featured"><img
+								src="images/Aco_Psicologico_Treinadores.jpg" alt="" /></a>
 						<h3><a href="javascript:void(0)">Acompanhamento Psicológico de Treinadores</a></h3>
 
 					</article>
@@ -691,151 +731,187 @@
 		</div>
 	</div>
 
-<!-- team -->
-			<article id="team" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>Equipa</h2>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured" style="height: 350px;"><img src="images/team1.jpg" alt="" /></a>
-								<h3><a href="#">Emanuel Dias</a></h3>
-								<h4 style="color: #888888;">Psicólogo</h4>
-								<ul style='display: inline-block; text-align: left; color: #333333;'>
-									<li>Mestrado em Psicologia da Educação e do Desenvolvimento Humano</li>
-									<li>Especialização Avançada em Psicologia do Desporto, Exercício e Performance</li>
-									<li>Experiência em clubes como Dragon Force FC Porto e Arsenal Clube da Maia</li>
-									<li>Experiência nas modalidades de Futebol, Futsal, Hóquei em Patins, Andebol e Voleibol</li>
-								</ul>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured" style="height: 350px;"><img src="images/team2.jpg" alt="" /></a>
-								<h3><a href="#">Tiago Costa</a></h3>
-								<h4 style="color: #888888;">Psicólogo</h4>
-								<ul style='display: inline-block; text-align: left; color: #333333;'>
-									<li>Mestrado em Psicologia Clínica e da Saúde</li>
-									<li>Especialização Avançada em Psicologia do Desporto, Exercício e Performance</li>
-									<li>Formação complementar em Psicologia do Alto Rendimento e Desenvolvimento de Atletas pelo Barcelona Innovation Hub</li>
-									<li>Experiência em clubes como Dragon Force FC Porto e Académico FC</li>
-									<li>Experiência nas modalidades de Futebol, Andebol, Basquetebol e Hóquei e Bilhar</li>
-								</ul>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured" style="height: 350px;"><img src="images/team3.JPG" alt="" /></a>
-								<h3><a href="#">Andreia Ferraz</a></h3>
-								<h4 style="color: #888888;">Psicóloga</h4>
-								<ul style='display: inline-block; text-align: left; color: #333333;'>
-									<li>Mestrado integrado em Psicologia, com especialização em Psicologia das Organizações, Social e do Trabalho</li>
-									<li>Formação complementar em Psicologia para o Treinador no Alto Rendimento e Psicologia para o Desenvolvimento de Atletas pelo Barcelona Innovation Hub</li>
-									<li>Formação complementar em Psicologia para o Alto Rendimento pelo FC Porto Football Sciences Institute</li>
-									<li>Experiência em clubes como Boavista FC, FC Porto e SC Braga</li>
-									<li>Experiência nas modalidades de Futebol, Ginástica, Basquetebol, Hóquei, Voleibol, Remo, Canoagem e Esgrima</li>
-								</ul>
-							</article>
-						</div>
+	<!-- team -->
+	<article id="team" class="wrapper style3">
+		<div class="container">
+			<header>
+				<h2>Equipa</h2>
+			</header>
+			<div class="row">
+				<div class="col-4 col-6-medium col-12-small">
+					<article class="box style2">
+						<a href="#" class="image featured" style="height: 350px;"><img src="images/team1.jpg"
+								alt="" /></a>
+						<h3><a href="#">Emanuel Dias</a></h3>
+						<h4 style="color: #888888;">Psicólogo</h4>
+						<ul style='display: inline-block; text-align: left; color: #333333;'>
+							<li>Mestrado em Psicologia da Educação e do Desenvolvimento Humano</li>
+							<li>Especialização Avançada em Psicologia do Desporto, Exercício e Performance</li>
+							<li>Experiência em clubes como Dragon Force FC Porto e Arsenal Clube da Maia</li>
+							<li>Experiência nas modalidades de Futebol, Futsal, Hóquei em Patins, Andebol e Voleibol
+							</li>
+						</ul>
+					</article>
 				</div>
-			</article>
+				<div class="col-4 col-6-medium col-12-small">
+					<article class="box style2">
+						<a href="#" class="image featured" style="height: 350px;"><img src="images/team2.jpg"
+								alt="" /></a>
+						<h3><a href="#">Tiago Costa</a></h3>
+						<h4 style="color: #888888;">Psicólogo</h4>
+						<ul style='display: inline-block; text-align: left; color: #333333;'>
+							<li>Mestrado em Psicologia Clínica e da Saúde</li>
+							<li>Especialização Avançada em Psicologia do Desporto, Exercício e Performance</li>
+							<li>Formação complementar em Psicologia do Alto Rendimento e Desenvolvimento de Atletas pelo
+								Barcelona Innovation Hub</li>
+							<li>Experiência em clubes como Dragon Force FC Porto e Académico FC</li>
+							<li>Experiência nas modalidades de Futebol, Andebol, Basquetebol e Hóquei e Bilhar</li>
+						</ul>
+					</article>
+				</div>
+				<div class="col-4 col-6-medium col-12-small">
+					<article class="box style2">
+						<a href="#" class="image featured" style="height: 350px;"><img src="images/team3.JPG"
+								alt="" /></a>
+						<h3><a href="#">Andreia Ferraz</a></h3>
+						<h4 style="color: #888888;">Psicóloga</h4>
+						<ul style='display: inline-block; text-align: left; color: #333333;'>
+							<li>Mestrado integrado em Psicologia, com especialização em Psicologia das Organizações,
+								Social e do Trabalho</li>
+							<li>Formação complementar em Psicologia para o Treinador no Alto Rendimento e Psicologia
+								para o Desenvolvimento de Atletas pelo Barcelona Innovation Hub</li>
+							<li>Formação complementar em Psicologia para o Alto Rendimento pelo FC Porto Football
+								Sciences Institute</li>
+							<li>Experiência em clubes como Boavista FC, FC Porto e SC Braga</li>
+							<li>Experiência nas modalidades de Futebol, Ginástica, Basquetebol, Hóquei, Voleibol, Remo,
+								Canoagem e Esgrima</li>
+						</ul>
+					</article>
+				</div>
+			</div>
+	</article>
 
 
 
 
-<!-- Testemunhos -->
-<article id="testemunho" class="wrapper style3">
-  <div class="container">
-    <header style="text-align: center; padding-top: 2em;">
-      <h2>O que dizem quem já viveu este processo...</h2>
-      <!-- <p style="color: white;">O que dizem quem já viveu este processo...</p>-->
-    </header>
+	<!-- Testemunhos -->
+	<article id="testemunho" class="wrapper style3">
+		<div class="container">
+			<header style="text-align: center; padding-top: 2em;">
+				<h2>O que dizem quem já viveu este processo...</h2>
+				<!-- <p style="color: white;">O que dizem quem já viveu este processo...</p>-->
+			</header>
 
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
 
-   <!-- Testemunho 1 -->
-    <div class="swiper-slide">
-      <article class="box style2" style="text-align: center;">
-        <a href="#" class="testemunho-img">
-          <img src="images/pic01.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
-        </a>
-        <p class="testemunho-aspas"><em>Então você ajudou me a libertar um peso enorme que tinha, como por exemplo no futebol quando em algumas situações, eu tinha razão mas tinha medo de demonstrar então saía sempre prejudicado, o que já não acontece agora. Também me ajudou a superar o medo de errar. Eu quando falhava por exemplo um passe, ficava com o erro na minha cabeça e consequentemente o resto do jogo já não me corria bem, o que também já não acontece devido à sua ajuda. Sinto-me uma pessoa mais liberta e com mais confiança.</em></p>
-        <p style="margin-bottom: 1em;"><strong>Atleta, 16 anos</strong></p>
-      </article>
-    </div>
-	
+					<!-- Testemunho 1 -->
+					<div class="swiper-slide">
+						<article class="box style2" style="text-align: center;">
+							<a href="#" class="testemunho-img">
+								<img src="images/pic01.jpg" alt=""
+									style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+							</a>
+							<p class="testemunho-aspas"><em>Então você ajudou me a libertar um peso enorme que tinha,
+									como por exemplo no futebol quando em algumas situações, eu tinha razão mas tinha
+									medo de demonstrar então saía sempre prejudicado, o que já não acontece agora.
+									Também me ajudou a superar o medo de errar. Eu quando falhava por exemplo um passe,
+									ficava com o erro na minha cabeça e consequentemente o resto do jogo já não me
+									corria bem, o que também já não acontece devido à sua ajuda. Sinto-me uma pessoa
+									mais liberta e com mais confiança.</em></p>
+							<p style="margin-bottom: 1em;"><strong>Atleta, 16 anos</strong></p>
+						</article>
+					</div>
 
-    <!-- Testemunho 2 -->
-    <div class="swiper-slide">
-      <article class="box style2" style="text-align: center;">
-        <a href="#" class="testemunho-img">
-          <img src="images/pic02.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
-        </a>
-        <p class="testemunho-aspas"><em>Muito obrigada Josué, só tenho a agradecer a forma como acolheu o António, às vezes que o António pede para ter consulta. 'Mãe por favor, esta semana posso falar com o Josué, eu sei que vou ficar melhor'. Muito obrigada.</em></p>
-        <p style="margin-bottom: 1em;"><strong>Mãe de atleta, 9 anos</strong></p>
-      </article>
-    </div>
 
-    <!-- Testemunho 3 -->
-    <div class="swiper-slide">
-      <article class="box style2" style="text-align: center;">
-        <a href="#" class="testemunho-img">
-          <img src="images/pic03.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
-        </a>
-        <p class="testemunho-aspas"><em>Bem procurei este acompanhamento para me poder desenvolver melhor mentalmente, notei grandes diferenças na maneira que via as coisas e em termos de uma comunicação diferente com as pessoas e também no futebol, os trabalhos que fazíamos ajudavam-me a desenvolver melhor e descobrir uma opinião das coisas que não conseguia.</em></p>
-        <p style="margin-bottom: 1em;"><strong>Atleta, 16 anos</strong></p>
-      </article>
-    </div>
+					<!-- Testemunho 2 -->
+					<div class="swiper-slide">
+						<article class="box style2" style="text-align: center;">
+							<a href="#" class="testemunho-img">
+								<img src="images/pic02.jpg" alt=""
+									style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+							</a>
+							<p class="testemunho-aspas"><em>Muito obrigada Josué, só tenho a agradecer a forma como
+									acolheu o António, às vezes que o António pede para ter consulta. 'Mãe por favor,
+									esta semana posso falar com o Josué, eu sei que vou ficar melhor'. Muito
+									obrigada.</em></p>
+							<p style="margin-bottom: 1em;"><strong>Mãe de atleta, 9 anos</strong></p>
+						</article>
+					</div>
 
-    <!-- Testemunho 4 -->
-    <div class="swiper-slide">
-      <article class="box style2" style="text-align: center;">
-        <a href="#" class="testemunho-img">
-          <img src="images/pic04.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
-        </a>
-        <p class="testemunho-aspas"><em>Por estarem constantemente a gozar comigo procurei este apoio. Sinto-me agora mais confiante e com menos medo de errar. Foi uma grande ajuda. E eu gostaria de agradecer por tudo.</em></p>
-        <p style="margin-bottom: 1em;"><strong>Atleta, 13 anos</strong></p>
-      </article>
-    </div>
+					<!-- Testemunho 3 -->
+					<div class="swiper-slide">
+						<article class="box style2" style="text-align: center;">
+							<a href="#" class="testemunho-img">
+								<img src="images/pic03.jpg" alt=""
+									style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+							</a>
+							<p class="testemunho-aspas"><em>Bem procurei este acompanhamento para me poder desenvolver
+									melhor mentalmente, notei grandes diferenças na maneira que via as coisas e em
+									termos de uma comunicação diferente com as pessoas e também no futebol, os trabalhos
+									que fazíamos ajudavam-me a desenvolver melhor e descobrir uma opinião das coisas que
+									não conseguia.</em></p>
+							<p style="margin-bottom: 1em;"><strong>Atleta, 16 anos</strong></p>
+						</article>
+					</div>
 
-    <!-- Testemunho 5 -->
-    <div class="swiper-slide">
-      <article class="box style2" style="text-align: center;">
-        <a href="#" class="testemunho-img">
-          <img src="images/pic05.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
-        </a>
-        <p class="testemunho-aspas"><em>O que me levou a procurar o acompanhamento psicológico foi quando comecei a reparar que já não estava a evoluir no futebol por motivos mentais e foi aí que percebi que necessitava de acompanhamento psicológico. As maiores mudanças foram perceber como certas coisas, como por exemplo que o pensamento mau predomina sempre o nosso cérebro, e com o acompanhamento eu comecei a conseguir contornar isso. Alguns medos também foram desaparecendo. A minha confiança em tudo. A minha evolução em todos os quesitos que foram trabalhados.</em></p>
-        <p style="margin-bottom: 1em;"><strong>Atleta</strong></p>
-      </article>
-    </div>
+					<!-- Testemunho 4 -->
+					<div class="swiper-slide">
+						<article class="box style2" style="text-align: center;">
+							<a href="#" class="testemunho-img">
+								<img src="images/pic04.jpg" alt=""
+									style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+							</a>
+							<p class="testemunho-aspas"><em>Por estarem constantemente a gozar comigo procurei este
+									apoio. Sinto-me agora mais confiante e com menos medo de errar. Foi uma grande
+									ajuda. E eu gostaria de agradecer por tudo.</em></p>
+							<p style="margin-bottom: 1em;"><strong>Atleta, 13 anos</strong></p>
+						</article>
+					</div>
 
-    <!-- Testemunho 6 (placeholder) -->
-    <div class="swiper-slide">
-      <article class="box style2" style="text-align: center;">
-        <a href="#" class="testemunho-img">
-          <img src="images/pic06.jpg" alt="" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
-        </a>
-        <p class="testemunho-aspas"><em>Sed amet ornare.</em></p>
-        <p style="margin-bottom: 1em;"><strong>Ornare nulla proin odio consequat.</strong></p>
-      </article>
-    </div>
+					<!-- Testemunho 5 -->
+					<div class="swiper-slide">
+						<article class="box style2" style="text-align: center;">
+							<a href="#" class="testemunho-img">
+								<img src="images/pic05.jpg" alt=""
+									style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+							</a>
+							<p class="testemunho-aspas"><em>O que me levou a procurar o acompanhamento psicológico foi
+									quando comecei a reparar que já não estava a evoluir no futebol por motivos mentais
+									e foi aí que percebi que necessitava de acompanhamento psicológico. As maiores
+									mudanças foram perceber como certas coisas, como por exemplo que o pensamento mau
+									predomina sempre o nosso cérebro, e com o acompanhamento eu comecei a conseguir
+									contornar isso. Alguns medos também foram desaparecendo. A minha confiança em tudo.
+									A minha evolução em todos os quesitos que foram trabalhados.</em></p>
+							<p style="margin-bottom: 1em;"><strong>Atleta</strong></p>
+						</article>
+					</div>
 
-      </div>
+					<!-- Testemunho 6 (placeholder) -->
+					<div class="swiper-slide">
+						<article class="box style2" style="text-align: center;">
+							<a href="#" class="testemunho-img">
+								<img src="images/pic06.jpg" alt=""
+									style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin: 1em auto 0;" />
+							</a>
+							<p class="testemunho-aspas"><em>Sed amet ornare.</em></p>
+							<p style="margin-bottom: 1em;"><strong>Ornare nulla proin odio consequat.</strong></p>
+						</article>
+					</div>
 
-      <!-- Setas de navegação -->
-      <div class="swiper-button-prev custom-nav"></div>
-      <div class="swiper-button-next custom-nav"></div>
-    </div>
+				</div>
 
-    <!--<footer style="text-align: center; margin-top: 3em; padding-bottom: 2em;">
+				<!-- Setas de navegação -->
+				<div class="swiper-button-prev custom-nav"></div>
+				<div class="swiper-button-next custom-nav"></div>
+			</div>
+
+			<!--<footer style="text-align: center; margin-top: 3em; padding-bottom: 2em;">
       <p style="color: white;">Quer partilhar a sua experiência?</p>
       <a href="#contact" class="button large scrolly">Entre em contacto</a>
     </footer> -->
-  </div>
-</article>
+		</div>
+	</article>
 
 
 
@@ -884,15 +960,15 @@
 							<div class="col-12">
 								<ul class="actions">
 									<li><input type="submit" style="background: #E34224;
-		color: white;
-		padding: 1em 2em;
-		border-radius: 0;
-		text-decoration: none;
-		display: inline-block;
-		font-weight: bold;
-		font-size: 16px;
-		text-align: center;
-		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);" value="Enviar Mensagem" />
+										color: white;
+										padding: 1em 2em;
+										border-radius: 0;
+										text-decoration: none;
+										display: inline-block;
+										font-weight: bold;
+										font-size: 16px;
+										text-align: center;
+										box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);" value="Enviar Mensagem" />
 									</li>
 								</ul>
 							</div>
@@ -981,53 +1057,53 @@
 		});
 	</script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-	console.log("DOM totalmente carregado.");
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log("DOM totalmente carregado.");
 
-	const form = document.getElementById('contactForm');
-	const messageSent = document.getElementById('messageSent');
+			const form = document.getElementById('contactForm');
+			const messageSent = document.getElementById('messageSent');
 
-	if (!form) {
-		console.error("Formulário com id 'contactForm' não encontrado.");
-		return;
-	}
-
-	form.addEventListener('submit', function (event) {
-		event.preventDefault(); // evita reload da página
-		console.log("Formulário submetido.");
-
-		const formData = new FormData(form);
-
-		fetch('https://formsubmit.co/ajax/pedro10pires@gmail.com', {
-			method: 'POST',
-			body: formData,
-			headers: {
-				'Accept': 'application/json'
+			if (!form) {
+				console.error("Formulário com id 'contactForm' não encontrado.");
+				return;
 			}
-		})
-			.then(response => {
-				console.log("Resposta recebida:", response);
-				if (response.ok) {
-					form.style.display = 'none';
-					messageSent.style.display = 'block';
-				} else {
-					return response.json().then(data => {
-						if (Object.hasOwn(data, 'errors')) {
-							alert(data["errors"].map(error => error["message"]).join(", "));
+
+			form.addEventListener('submit', function (event) {
+				event.preventDefault(); // evita reload da página
+				console.log("Formulário submetido.");
+
+				const formData = new FormData(form);
+
+				fetch('https://formsubmit.co/ajax/pedro10pires@gmail.com', {
+					method: 'POST',
+					body: formData,
+					headers: {
+						'Accept': 'application/json'
+					}
+				})
+					.then(response => {
+						console.log("Resposta recebida:", response);
+						if (response.ok) {
+							form.style.display = 'none';
+							messageSent.style.display = 'block';
 						} else {
-							alert("Ocorreu um erro ao enviar a mensagem.");
+							return response.json().then(data => {
+								if (Object.hasOwn(data, 'errors')) {
+									alert(data["errors"].map(error => error["message"]).join(", "));
+								} else {
+									alert("Ocorreu um erro ao enviar a mensagem.");
+								}
+							});
 						}
+					})
+					.catch(error => {
+						alert("Erro ao enviar a mensagem.");
+						console.error("Erro no fetch:", error);
 					});
-				}
-			})
-			.catch(error => {
-				alert("Erro ao enviar a mensagem.");
-				console.error("Erro no fetch:", error);
 			});
-	});
-});
-</script>
+		});
+	</script>
 
 	<script>
 		document.getElementById("toggleButton").addEventListener("click", function () {
@@ -1072,22 +1148,22 @@ document.addEventListener('DOMContentLoaded', function () {
 	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<!-- Inicialização -->
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    autoplay: {
-      delay: 7000,
-      disableOnInteraction: false
-    }
-  });
-</script>
+	<!-- Inicialização -->
+	<script>
+		const swiper = new Swiper(".mySwiper", {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			loop: true,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev"
+			},
+			autoplay: {
+				delay: 7000,
+				disableOnInteraction: false
+			}
+		});
+	</script>
 
 </body>
 
