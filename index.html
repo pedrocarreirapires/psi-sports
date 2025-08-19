@@ -36,7 +36,7 @@
 		}
 	}
 
-	.button.large.scrolly {
+	.button.large.scrolly.home {
 		background: #E34224;
 		color: white;
 		padding: 1em 2em;
@@ -49,6 +49,23 @@
 		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 		transition: opacity 0.3s ease;
 	}
+
+	.button.large.scrolly {
+  background: #E34224;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 0;
+  text-decoration: none;
+  display: block; /* instead of inline-block */
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: opacity 0.3s ease;
+  margin: 0 auto; /* this will center it */
+  width: fit-content; /* makes sure it doesn’t stretch full width */
+}
+
 
 	.button.large.scrolly:hover {
 		opacity: 0.9;
@@ -357,7 +374,6 @@
 
 
 
-
 	.testemunho-autor,
 	.box.style2 strong {
 		font-weight: bold;
@@ -450,6 +466,36 @@
 		flex-direction: column;
 	}
 
+/* FIX: imagem não deve sair do article no mobile */
+@media (max-width: 768px) {
+  /* garante que nada “sangra” para fora do article */
+  #team .box.style2 {
+    overflow: hidden;
+  }
+
+  /* cancela offsets/margens do tema e a altura inline do <a> */
+  #team .box.style2 .image.featured {
+    position: static !important;  /* em vez de relative + top negativo */
+    top: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;      /* sobrepõe o style="height:350px" */
+    display: block;
+    line-height: 0;               /* remove gaps por baseline */
+  }
+
+  /* desfaz o height:100% global só nesta secção */
+  #team .box.style2 .image.featured img {
+    width: 100% !important;
+    height: auto !important;      /* evita esticar/cortar no mobile */
+    object-fit: cover;
+    display: block;
+  }
+}
+
+
+
 
 	/*@media screen and (max-width: 768px) { 
  Evita que listas fiquem demasiado largas/pisadas no mobile 
@@ -505,7 +551,7 @@
 					</header>
 					<h2 class="text-white"><strong>Prepara a tua mente da mesma</strong></h2>
 					<h2 class="text-white"><strong>forma que preparas o teu corpo</strong></h2>
-					<a href="#contact" class="button large scrolly">Agendar Consulta</a>
+					<a href="#contact" class="button large scrolly home">Agendar Consulta</a>
 				</div>
 			</div>
 		</div>
@@ -776,15 +822,11 @@
 						<h3><a href="#">Andreia Ferraz</a></h3>
 						<h4 style="color: #888888;">Psicóloga</h4>
 						<ul style='display: inline-block; text-align: left; color: #333333;'>
-							<li>Mestrado integrado em Psicologia, com especialização em Psicologia das Organizações,
-								Social e do Trabalho</li>
-							<li>Formação complementar em Psicologia para o Treinador no Alto Rendimento e Psicologia
-								para o Desenvolvimento de Atletas pelo Barcelona Innovation Hub</li>
-							<li>Formação complementar em Psicologia para o Alto Rendimento pelo FC Porto Football
-								Sciences Institute</li>
+							<li>Mestrado em Psicologia com especialização em Psicologia das Organizações, Social e do Trabalho</li>
+							<li>Formação complementar em Psicologia para o Treinador no Alto Rendimento e Desenvolvimento de Atletas pelo Barcelona Innovation Hub, e Psicologia para o Alto Rendimento pelo FC Porto Football Sciences Institute</li>
 							<li>Experiência em clubes como Boavista FC, FC Porto e SC Braga</li>
 							<li>Experiência nas modalidades de Futebol, Ginástica, Basquetebol, Hóquei, Voleibol, Remo,
-								Canoagem e Esgrima</li>
+Canoagem e Esgrim</li>
 						</ul>
 					</article>
 				</div>
