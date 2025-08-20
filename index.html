@@ -51,20 +51,23 @@
 	}
 
 	.button.large.scrolly {
-  background: #E34224;
-  color: white;
-  padding: 1em 2em;
-  border-radius: 0;
-  text-decoration: none;
-  display: block; /* instead of inline-block */
-  font-weight: bold;
-  font-size: 16px;
-  text-align: center;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transition: opacity 0.3s ease;
-  margin: 0 auto; /* this will center it */
-  width: fit-content; /* makes sure it doesn’t stretch full width */
-}
+		background: #E34224;
+		color: white;
+		padding: 1em 2em;
+		border-radius: 0;
+		text-decoration: none;
+		display: block;
+		/* instead of inline-block */
+		font-weight: bold;
+		font-size: 16px;
+		text-align: center;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+		transition: opacity 0.3s ease;
+		margin: 0 auto;
+		/* this will center it */
+		width: fit-content;
+		/* makes sure it doesn’t stretch full width */
+	}
 
 
 	.button.large.scrolly:hover {
@@ -303,74 +306,81 @@
 		z-index: 1;
 	}
 
-	
-.testemunho-aspas {
-    font-size: 1.2em;
-    font-style: italic;
-    line-height: 1.8;
-    padding: 1em 2em;
-    color: #4A392F;
-    position: relative;
-    z-index: 2;
-    margin-bottom: 1em;
-    overflow: visible; /* Garante que as aspas não sejam cortadas */
-}
 
-.testemunho-aspas::before,
-.testemunho-aspas::after {
-    font-family: serif;
-    font-size: 3em; /* Reduzido para melhor proporção */
-    color: #E34224;
-    position: absolute;
-    z-index: 1;
-    opacity: 1;
-    pointer-events: none;
-    line-height: 1;
-}
+	.testemunho-aspas {
+		font-size: 1.2em;
+		font-style: italic;
+		line-height: 1.8;
+		padding: 1em 2em;
+		color: #4A392F;
+		position: relative;
+		z-index: 2;
+		margin-bottom: 1em;
+		overflow: visible;
+		/* Garante que as aspas não sejam cortadas */
+	}
 
-.testemunho-aspas::before {
-    content: "“";
-    left: -20px; /* Ajustado para melhor alinhamento horizontal */
-    top: 0;      /* Alinhado com o topo do texto */
-}
+	.testemunho-aspas::before,
+	.testemunho-aspas::after {
+		font-family: serif;
+		font-size: 3em;
+		/* Reduzido para melhor proporção */
+		color: #E34224;
+		position: absolute;
+		z-index: 1;
+		opacity: 1;
+		pointer-events: none;
+		line-height: 1;
+	}
 
-.testemunho-aspas::after {
-    content: "”";
-    right: -20px; /* Ajustado para melhor alinhamento horizontal */
-    bottom: 0;    /* Alinhado com a base do texto */
-}
+	.testemunho-aspas::before {
+		content: "“";
+		left: -20px;
+		/* Ajustado para melhor alinhamento horizontal */
+		top: 0;
+		/* Alinhado com o topo do texto */
+	}
+
+	.testemunho-aspas::after {
+		content: "”";
+		right: -20px;
+		/* Ajustado para melhor alinhamento horizontal */
+		bottom: 0;
+		/* Alinhado com a base do texto */
+	}
 
 
-@media (max-width: 768px) {
-    .testemunho-aspas {
-        font-size: 1.1em;
-        padding: 1em;
-        position: relative;
-        overflow: visible;
-    }
+	@media (max-width: 768px) {
+		.testemunho-aspas {
+			font-size: 1.1em;
+			padding: 1em;
+			position: relative;
+			overflow: visible;
+		}
 
-    .testemunho-aspas::before,
-    .testemunho-aspas::after {
-        font-size: 2.5em;
-        position: absolute;
-        color: #E34224;
-        pointer-events: none;
-        line-height: 1;
-    }
+		.testemunho-aspas::before,
+		.testemunho-aspas::after {
+			font-size: 2.5em;
+			position: absolute;
+			color: #E34224;
+			pointer-events: none;
+			line-height: 1;
+		}
 
-    .testemunho-aspas::before {
-        content: "“";
-        left: -10px;
-        top: -10px;
-    }
+		.testemunho-aspas::before {
+			content: "“";
+			left: -10px;
+			top: -10px;
+		}
 
-    .testemunho-aspas::after {
-        content: "”";
-        right: -10px;
-        top: auto;
-        bottom: -10px; /* Esta linha garante que a aspa final fique em baixo */
-    }
-}
+		.testemunho-aspas::after {
+			content: "”";
+			right: -10px;
+			top: auto;
+			bottom: -10px;
+			/* Esta linha garante que a aspa final fique em baixo */
+		}
+	}
 
 
 
@@ -466,33 +476,38 @@
 		flex-direction: column;
 	}
 
-/* FIX: imagem não deve sair do article no mobile */
-@media (max-width: 768px) {
-  /* garante que nada “sangra” para fora do article */
-  #team .box.style2 {
-    overflow: hidden;
-  }
+	/* FIX: imagem não deve sair do article no mobile */
+	@media (max-width: 768px) {
 
-  /* cancela offsets/margens do tema e a altura inline do <a> */
-  #team .box.style2 .image.featured {
-    position: static !important;  /* em vez de relative + top negativo */
-    top: auto !important;
-    left: auto !important;
-    margin: 0 !important;
-    width: 100% !important;
-    height: auto !important;      /* sobrepõe o style="height:350px" */
-    display: block;
-    line-height: 0;               /* remove gaps por baseline */
-  }
+		/* garante que nada “sangra” para fora do article */
+		#team .box.style2 {
+			overflow: hidden;
+		}
 
-  /* desfaz o height:100% global só nesta secção */
-  #team .box.style2 .image.featured img {
-    width: 100% !important;
-    height: auto !important;      /* evita esticar/cortar no mobile */
-    object-fit: cover;
-    display: block;
-  }
-}
+		/* cancela offsets/margens do tema e a altura inline do <a> */
+		#team .box.style2 .image.featured {
+			position: static !important;
+			/* em vez de relative + top negativo */
+			top: auto !important;
+			left: auto !important;
+			margin: 0 !important;
+			width: 100% !important;
+			height: auto !important;
+			/* sobrepõe o style="height:350px" */
+			display: block;
+			line-height: 0;
+			/* remove gaps por baseline */
+		}
+
+		/* desfaz o height:100% global só nesta secção */
+		#team .box.style2 .image.featured img {
+			width: 100% !important;
+			height: auto !important;
+			/* evita esticar/cortar no mobile */
+			object-fit: cover;
+			display: block;
+		}
+	}
 
 
 
@@ -506,6 +521,21 @@
     overflow: auto;
   }
 } */
+
+
+ ul.social li a:before{
+	background-color: transparent;
+	 color: white !important;
+	 
+
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+
+ }
+
+
+
 </style>
 
 
@@ -533,7 +563,7 @@
 				<li><a href="#portfolio" onclick="closeMenu()">Serviços</a></li>
 				<li><a href="#team" onclick="closeMenu()">Equipa</a></li>
 				<li><a href="#testemunho" onclick="closeMenu()">Testemunhos</a></li>
-				<li><a href="#contact" onclick="closeMenu()">Contacto</a></li>
+				<li><a href="#contact" onclick="closeMenu()" style="color: #E34224;">Agendar Consulta</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -650,7 +680,7 @@
 
 				<!-- Serviço 1 -->
 				<div class="col-6 col-6-medium col-12-small">
-					<article class="box style2" onclick="abrirModal('Consulta de Psicologia Desportiva Individual', `
+					<article class="box style2" onclick="abrirModal('Consulta de Psicologia Desportiva Individual para Atletas', `
 						<p>Sessões individuais focadas em desenvolver
 							as <strong>competências psicológicas</strong> necessárias para
 							otimizar o <strong>desempenho desportivo</strong> e o bem-estar do atleta, dentro e fora do
@@ -672,7 +702,8 @@
 						`)">
 						<a href="javascript:void(0)" class="image featured"><img
 								src="images/Psicologia_Desportiv_Individual.jpg" alt="" /></a>
-						<h3><a href="javascript:void(0)">Consulta de Psicologia Desportiva Individual</a></h3>
+						<h3><a href="javascript:void(0)">Consulta de Psicologia Desportiva Individual para Atletas</a>
+						</h3>
 
 					</article>
 				</div>
@@ -822,11 +853,14 @@
 						<h3><a href="#">Andreia Ferraz</a></h3>
 						<h4 style="color: #888888;">Psicóloga</h4>
 						<ul style='display: inline-block; text-align: left; color: #333333;'>
-							<li>Mestrado em Psicologia com especialização em Psicologia das Organizações, Social e do Trabalho</li>
-							<li>Formação complementar em Psicologia para o Treinador no Alto Rendimento e Desenvolvimento de Atletas pelo Barcelona Innovation Hub, e Psicologia para o Alto Rendimento pelo FC Porto Football Sciences Institute</li>
+							<li>Mestrado em Psicologia com especialização em Psicologia das Organizações, Social e do
+								Trabalho</li>
+							<li>Formação complementar em Psicologia para o Treinador no Alto Rendimento e
+								Desenvolvimento de Atletas pelo Barcelona Innovation Hub, e Psicologia para o Alto
+								Rendimento pelo FC Porto Football Sciences Institute</li>
 							<li>Experiência em clubes como Boavista FC, FC Porto e SC Braga</li>
 							<li>Experiência nas modalidades de Futebol, Ginástica, Basquetebol, Hóquei, Voleibol, Remo,
-Canoagem e Esgrim</li>
+								Canoagem e Esgrim</li>
 						</ul>
 					</article>
 				</div>
@@ -1017,23 +1051,25 @@ Canoagem e Esgrim</li>
 					<hr />
 					<h3><strong>Onde me podes encontrar?</strong></h3>
 					<ul class="social">
-						<li><a href="https://www.facebook.com/people/Josu%C3%A9-Fonseca-Psicologia/61562748162794/#"
-								class="icon brands fa-facebook-f" style="background-color: grey;"><span
-									class="label">Facebook</span></a></li>
-						<li><a href="https://www.youtube.com/@Josu%C3%A9_Fonseca_Psic%C3%B3logo"
-								class="icon brands fa-youtube" style="background-color: grey;"><span
-									class="label">YouTube</span></a></li>
 						<li><a href="https://www.instagram.com/josue_psicologo_desporto/#"
-								class="icon brands fa-instagram" style="background-color: grey;"><span
+								class="icon brands fa-instagram" style="background-color: #E1306C;"><span
 									class="label">Instagram</span></a></li>
+						<li><a href="https://www.facebook.com/people/Josu%C3%A9-Fonseca-Psicologia/61562748162794/#"
+								class="icon brands fa-facebook-f" style="background-color: #1877F2;"><span class="label">Facebook</span></a></li>
+						<li><a href="https://api.whatsapp.com/send/?phone=351917859956&text&type=phone_number&app_absent=0"
+								class="icon brands fa-whatsapp" style="background-color: #25D366;"><span
+									class="label">Whatsapp</span></a></li>
 						<li><a href="https://www.linkedin.com/in/josu%C3%A9-fonseca-853005216/"
-								class="icon brands fa-linkedin-in" style="background-color: grey;"><span
+								class="icon brands fa-linkedin-in" style="background-color: 0A66C2;"><span
 									class="label">LinkedIn</span></a></li>
 						<li><a href="https://www.tiktok.com/@josue_psi.desporto" class="icon brands fa-tiktok"
-								style="background-color: grey;"><span class="label">TikTok</span></a></li>
-						<li><a href="https://api.whatsapp.com/send/?phone=351917859956&text&type=phone_number&app_absent=0"
-								class="icon brands fa-whatsapp" style="background-color: grey;"><span
-									class="label">Whatsapp</span></a></li>
+								style="background-color: #000000;"><span class="label">TikTok</span></a></li>
+						<li><a href="https://www.youtube.com/@Josu%C3%A9_Fonseca_Psic%C3%B3logo"
+								class="icon brands fa-youtube" style="background-color: #FF0000;"><span class="label">YouTube</span></a></li>
+
+
+
+
 					</ul>
 				</div>
 			</div>
